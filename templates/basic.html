@@ -1,6 +1,7 @@
 {% load static %}
  <html lang="en">
     <head>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
         <title>Disease Predictor and Specialist Recommender</title>
         <style>{% block css %} {% endblock %}</style>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -24,16 +25,16 @@
                       <a class="nav-link" href="/index">HOME </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#about-us">ABOUT US</a>
+                      <a class="nav-link" href="/about_us">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#services">SERVICES</a>
+                      <a class="nav-link" href="/services">SERVICES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="specialist">DOCTORS</a>
+                        <a class="nav-link" href="/specialist">DOCTORS</a>
                       </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                      <a class="nav-link" href="/testimonials">TESTIMONIALS</a>
                     </li>
                       <li class="nav-item">
                       <a class="nav-link" href="/accounts/profile">Profile</a>
@@ -42,28 +43,28 @@
                       <a class="nav-link" href="/logout">Logout{{user.username}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#social-media">CONTACT</a>
+                        <a class="n/av-link" href="contact">CONTACT</a>
                       </li>
                       {%else%}
                       <a class="nav-link" href="/index">HOME </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#about-us">ABOUT US</a>
+                      <a class="nav-link" href="/about_us">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#services">SERVICES</a>
+                      <a class="nav-link" href="/services">SERVICES</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="specialist">DOCTORS</a>
                       </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                      <a class="nav-link" href="/testimonials">TESTIMONIALS</a>
                     </li>
                       <li class="nav-item">
-                      <a class="nav-link" href="#user-profile">ACCOUNT</a>
+                      <a class="nav-link" href="/account">ACCOUNT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#social-media">CONTACT</a>
+                        <a class="nav-link" href="/contact">CONTACT</a>
                       </li>
                       {%endif%}
 

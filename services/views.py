@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-def services(request):
-    return render(request,'services.html')
+from django.views.generic import TemplateView
+
+class ServicePageView(TemplateView):
+    template_name = 'services.html'
+

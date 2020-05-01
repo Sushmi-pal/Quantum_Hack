@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path,include,re_path
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -24,7 +24,15 @@ from users import views as users_views
 # from django.contrib.auth import views as auth_views
 # from django.contrib.auth.views import  login,
 
-
+from services.views import (
+ServicePageView
+)
+from account.views import (
+AccountView
+)
+from about_us.views import (
+InfoView
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,11 +40,17 @@ urlpatterns = [
     path('',views.home),
     path('index/', views.home, name='home'),
     path('specialist/',include('specialist.urls')),
+    re_path('specialist/$',include('specialist.urls')),
     path('index/specialist/',include('specialist.urls')),
+    path('index/about_us/specialist/',include('specialist.urls')),
     path('testimonials/',include('testimonials.urls')),
     path('about_us/',include('about_us.urls')),
+    re_path(r'about_us/$',InfoView.as_view(),name='about_us'),
     path('contact/',include('contact.urls')),
     path('services/',include('services.urls')),
+    re_path(r'services/$',ServicePageView.as_view(),name='services'),
+    path('account/',include('account.urls')),
+    re_path(r'account/$',AccountView.as_view(),name='account'),
     path('register/',users_views.register ,name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('new/', views.new, name='new'),
