@@ -1,0 +1,91 @@
+{% load static %}
+ <html lang="en">
+    <head>
+        <title>Disease Predictor and Specialist Recommender</title>
+        <style>{% block css %} {% endblock %}</style>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+         <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    </head>
+         <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"><img src = "{% static 'images/logooo.png' %}" alt="image" /> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fa fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      {% if user.is_authenticated %}
+                      <a class="nav-link" href="/index">HOME </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about-us">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="specialist">DOCTORS</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                    </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="/accounts/profile">Profile</a>
+                    </li>
+                                          <li class="nav-item">
+                      <a class="nav-link" href="/logout">Logout{{user.username}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social-media">CONTACT</a>
+                      </li>
+                      {%else%}
+                      <a class="nav-link" href="/index">HOME </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about-us">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#services">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="specialist">DOCTORS</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                    </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="#user-profile">ACCOUNT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social-media">CONTACT</a>
+                      </li>
+                      {%endif%}
+
+                      <!--<nav class="navbar navbar-white">-->
+  <!--<form class="form-inline">-->
+    <!--<button class="btn btn-outline-success" type="button"><font color="white"><a href="/choose.html">Login</a></font> </button>-->
+    <!--<button class="btn btn-outline-success" type="button"><font color="white"><a href="/choosereg.html">Sign Up</a></font></button>-->
+
+  <!--</form>-->
+<!--</nav>-->
+                  </ul>
+                </div>
+              </nav>
+            <!--<section id="doctors">-->
+
+     {% block body %}
+
+        <footer class="mastfoot mt-auto text-center">
+  <div class="inner">
+    <p>© Disease Predictor and Specialist Recommender.</p>
+  </div>
+</footer>
+
+    {% endblock %}
+</html>

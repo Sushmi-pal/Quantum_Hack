@@ -1,0 +1,21 @@
+{% extends 'basic.html' %}
+{% block body %}
+{% load static %}
+<section id="testimonials">
+  <div class="container testi">
+    <h1 class="title text-center">WHAT OUR USERS SAY?</h1>
+    <div class="row offset-1">
+      <div class="col-md-5 testimonials">
+        <p>Thanks for your easy and friendly webpage. It led us to predict my symptoms at an early stage.</p>
+         <img src = "{% static 'images/testi_01.png' %}" />
+        <p class="user-details"><b>Bishal Adhikari</b><br>Manager of Racer</br></p>
+        </div>
+        <div class="col-md-5 testimonials">
+          <p>Thankyou for the detailed appointment information of doctors, it helped me reach on time.</p>
+          <img src = "{% static 'images/testi_02.png' %}" />
+          <p class="user-details"><b>Susan Shrestha</b><br>Worker at XYZ ltd.</br></p>
+          </div>
+    </div>
+    </div>
+    </section>
+{% endblock %}
