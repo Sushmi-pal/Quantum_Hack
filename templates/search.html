@@ -45,9 +45,14 @@
 {% load static %}
 <section id="doctors">
   <div class="container text-center">
-    <h1 class="title text-center">The Specialists</h1>
+    <h1 class="title text-center">Search Results</h1>
+      <!--<form method="get" action="/specialist/search" class="form-inline my-2 my-lg-0">-->
+      <!--<input class="form-control mr-sm-2" type="search" name="query" id="query" placeholder="Search" aria-label="Search">-->
+      <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
 
+    <!--</form>-->
       <!--<a href="/specialist/search">Search</a>-->
+
 
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
@@ -70,14 +75,15 @@
         <!--Slideshow starts here -->
     <div class="container carousel-inner no-padding">
         {% if speciality|length < 1 %}
-            <p>No Search Results</p>
+        <p>No Search Results</p>
         Your search <b>{{query}}</b> didn't match any documents<br>
           Suggestions:
+        <ul>
           <li>Try different keywords.</li>
           <li>
               Try fewer keywords
-          </li>
-            {% endif %}
+          </li></ul>
+        {% endif %}
       <div class="carousel-item active">
         <div class="col-xs-3 col-sm-3 col-md-3">
           <div class="card" style="width: 18rem;">

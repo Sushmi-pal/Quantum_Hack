@@ -41,6 +41,7 @@ urlpatterns = [
     path('index/', views.home, name='home'),
     path('specialist/',include('specialist.urls')),
     re_path('specialist/$',include('specialist.urls')),
+    path('specialist/search',include('specialist.urls')),
     path('index/specialist/',include('specialist.urls')),
     path('index/about_us/specialist/',include('specialist.urls')),
     path('testimonials/',include('testimonials.urls')),
