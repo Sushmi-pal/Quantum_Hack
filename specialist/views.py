@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from . models import doctor_profile
 from django.contrib import messages
 from math import ceil
+from django.contrib.postgres.search import SearchQuery
 from . import views
 from django.views.generic import TemplateView
 # Create your views here.
@@ -34,6 +35,15 @@ def search(request):
     return render(request, 'search.html', params)
 
     #
+def select(request):
+    SearchQuery('red tomato')  # two keywords
+    SearchQuery('tomato red')  # same results as above
+    SearchQuery('red tomato', search_type='phrase')  # a phrase
+    SearchQuery('tomato red', search_type='phrase')  # a different phrase
+    SearchQuery("'tomato' & ('red' | 'green')", search_type='raw')
+    return render(request, 'select.html')
+
+
 
 
 

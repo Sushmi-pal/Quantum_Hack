@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+</head>
+<body>
+<div class="container">
+<form method="get" action="/blog/select" class="form-inline my-2 my-lg-0">
+<input class="form-control mr-sm-2" type="search" name="query" id="query" placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+<!--{% if disease|length < 1 %}-->
+            <!--<p>No Search Results</p>-->
+        <!--Your search <b>{{query}}</b> didn't match any documents<br>-->
+          <!--Suggestions:-->
+          <!--<li>Try different keywords.</li>-->
+          <!--<li>-->
+              <!--Try fewer keywords-->
+          <!--</li>-->
+            <!--{% endif %}-->
+    </form>
+<h2>Search Results</h2>
+{% for i in disease %}
+    {{i.diseasename}}<br>
+{% endfor %}
+
+
+    </div>
+</body>
+</html>

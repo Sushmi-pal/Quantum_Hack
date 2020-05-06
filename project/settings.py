@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 
 ]
+ACCOUNT_EMAIL_VERIFICATION=True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

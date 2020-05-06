@@ -6,6 +6,7 @@ urlpatterns = [
 
     path('',views.doc,name='doctors'),
     path('search',views.search,name='search'),
+    path('select',views.select,name='select'),
 
 
 
