@@ -5,8 +5,13 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.conf import settings
 from django.core.mail import send_mail
 from django.db import transaction
+from .models import UserReview
 
 
+
+
+from . import models
+from .models import Profile
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -61,3 +66,10 @@ class  receive:
     
     return render(request,'')
     """
+def review(request):
+    con=UserReview.objects.all()
+    sub=Profile.objects.all()
+    sus = request.POST['query']
+    models.UserReview.objects.create(review=sus)
+    param = {'sus': sus,'con':con}
+    return render(request,'review.html',param)

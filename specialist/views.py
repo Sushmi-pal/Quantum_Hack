@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . models import doctor_profile
+from . models import Symptoms
 from django.contrib import messages
 from math import ceil
+from django.db.models import Q
 from django.contrib.postgres.search import SearchQuery
 from . import views
 from django.views.generic import TemplateView
@@ -34,15 +36,13 @@ def search(request):
     params = {'speciality': speciality, 'query': query}
     return render(request, 'search.html', params)
 
-    #
-def select(request):
-    SearchQuery('red tomato')  # two keywords
-    SearchQuery('tomato red')  # same results as above
-    SearchQuery('red tomato', search_type='phrase')  # a phrase
-    SearchQuery('tomato red', search_type='phrase')  # a different phrase
-    SearchQuery("'tomato' & ('red' | 'green')", search_type='raw')
-    return render(request, 'select.html')
 
+def select(request):
+    query=request.GET['q']
+    print(query)
+    disease=Symptoms.objects.filter(sym_name__icontains = query)
+    para={'disease':disease, 'query': query}
+    return render(request,'select.html', para)
 
 
 

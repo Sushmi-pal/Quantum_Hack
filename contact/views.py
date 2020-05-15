@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.views.generic import TemplateView
 # Create your views here.
-def contact(request):
-    return render(request,'contact.html')
+class ContactView(TemplateView):
+    template_name = 'contact.html'

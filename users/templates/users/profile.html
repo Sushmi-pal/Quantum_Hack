@@ -91,6 +91,7 @@
 		<div class="media-body">
 			<h2 class="account-heading">{{ user.username }}</h2>
 			<p class="text-secondary">{{ user.email }}</p>
+
 		</div>
 	</div>
 
@@ -105,15 +106,23 @@
 			
 		</fieldset>
 		<div class="form-group">
-			<button class= "btn btn-outline-info" type="submit">
-				update
-			</button>
-			
+			<button class="btn btn-primary" type="submit">Update</button>
 
 		</div>
 		
 	</form>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form action="{% url 'review' %}"  method="post" class="form-inline">
+                {% csrf_token %}
+            <h2>Write Your Review</h2>
+            <input type="text" name="query" placeholder="Type Here">
+            <input type="submit" value="Submit">
+</form>
+        </div>
+    </div>
 </body>
 
 {% endblock content %}	

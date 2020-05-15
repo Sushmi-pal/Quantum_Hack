@@ -64,26 +64,27 @@
                         <a class="nav-link" href="/contact">CONTACT</a>
                       </li>
                       {%else%}
-                      <a class="nav-link" href="/index">HOME </a>
+                        <a class="nav-link" href="index.html">HOME </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="about_us">ABOUT US</a>
+                      <a class="nav-link" href="#about-us">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="services">SERVICES</a>
+                      <a class="nav-link" href="#services">SERVICES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="specialist">DOCTORS</a>
+                        <a class="nav-link" href="#doctors">DOCTORS</a>
                       </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="testimonials">TESTIMONIALS</a>
+                      <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
                     </li>
                       <li class="nav-item">
                       <a class="nav-link" href="#user-profile">ACCOUNT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">CONTACT</a>
+                        <a class="nav-link" href="#social-media">CONTACT</a>
                       </li>
+
                       {%endif%}
                       <!--<nav class="navbar navbar-white">-->
   <!--<form class="form-inline">-->
@@ -112,28 +113,28 @@
             </div>
             <img src = "{% static 'images/wave.png' %}" class="bottom-img"/>
         </section>
- <!--Aboutus section-->
-        <!--<section id="about-us">-->
-    <!--<div class="container">-->
-      <!--<h1 class="title text-center">WHY VISIT US?</h1>-->
-      <!--<div class="row">-->
-        <!--<div class="col-md-6 about-us">-->
-          <!--<p class="about-title">Why we're different?</p>-->
-          <!--<ul>-->
-            <!--<li>An easy and friendly web interface</li>-->
-            <!--<li>Approach to general diseases</li>-->
-            <!--<li>Know what you are suffering from</li>-->
-            <!--<li>Details about nearby specialist</li>-->
-            <!--<li>Accurate results on your hands.</li>-->
-            <!--<li>We protect your data</li>-->
-          <!--</ul>-->
-        <!--</div>-->
-        <!--<div class="col-md-6">-->
-           <!--<img src = "{% static 'images/about-us.jpg' %}" class="about-us-img"/>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</section>-->
+ Aboutus section
+        <section id="about-us">
+    <div class="container">
+      <h1 class="title text-center">WHY VISIT US?</h1>
+      <div class="row">
+        <div class="col-md-6 about-us">
+          <p class="about-title">Why we're different?</p>
+          <ul>
+            <li>An easy and friendly web interface</li>
+            <li>Approach to general diseases</li>
+            <li>Know what you are suffering from</li>
+            <li>Details about nearby specialist</li>
+            <li>Accurate results on your hands.</li>
+            <li>We protect your data</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+           <img src = "{% static 'images/about-us.jpg' %}" class="about-us-img"/>
+        </div>
+      </div>
+    </div>
+  </section>
         <!--services section-->
         <section id="services" class="services wow fadeIn">
           <div class="container text-center">
@@ -157,194 +158,217 @@
  <!-- doctor section -->
 
 
- <!--<section id="doctors">-->
+ <section id="doctors">
+{% if user.is_authenticated %}
+     {% load static %}
+     <style>
+      .col-md-3
+          {
+          display: inline-block;
+          margin-left:-4px;
+          }
+          .carousel-indicators .active {
+          background-color: blue;
+          margin-left:22px;
+          margin-right: 22px;
+            }
+          .col-md-3 img{
+          width:100%;
+          height:auto;
+          }
+          body .carousel-indicator li{
+          background-color: blue;
+          }
+          body .carousel-indicators{
+          bottom: 0;
+          }
+          body .carousel-control-prev-icon;
+          body .carousel-control-next-icon{
+          background-color: blue;
+          margin-left:10px;
+          padding-left: 5px;
+          padding-right: 5px;
+          }
+           body .no-padding{
+           padding-left: 0;
+           padding-right: 0;
+           }
+           </style>
+  <div class="container text-center">
+    <h1 class="title text-center">The Specialists</h1>
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
-     <!--{% load static %}-->
-     <!--<style>-->
-      <!--.col-md-3-->
-          <!--{-->
-          <!--display: inline-block;-->
-          <!--margin-left:-4px;-->
-          <!--}-->
-          <!--.carousel-indicators .active {-->
-          <!--background-color: blue;-->
-          <!--margin-left:22px;-->
-          <!--margin-right: 22px;-->
-            <!--}-->
-          <!--.col-md-3 img{-->
-          <!--width:100%;-->
-          <!--height:auto;-->
-          <!--}-->
-          <!--body .carousel-indicator li{-->
-          <!--background-color: blue;-->
-          <!--}-->
-          <!--body .carousel-indicators{-->
-          <!--bottom: 0;-->
-          <!--}-->
-          <!--body .carousel-control-prev-icon;-->
-          <!--body .carousel-control-next-icon{-->
-          <!--background-color: blue;-->
-          <!--margin-left:10px;-->
-          <!--padding-left: 5px;-->
-          <!--padding-right: 5px;-->
-          <!--}-->
-           <!--body .no-padding{-->
-           <!--padding-left: 0;-->
-           <!--padding-right: 0;-->
-           <!--}-->
-           <!--</style>-->
-  <!--<div class="container text-center">-->
-    <!--<h1 class="title text-center">The Specialists</h1>-->
-    <!--<div id="demo" class="carousel slide" data-ride="carousel">-->
+    <ul class="carousel-indicators">
 
-    <!--<ul class="carousel-indicators">-->
+    <!--left and right controls for the slide-->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon" margin left="25"></span>
+    </a>
 
-    <!--&lt;!&ndash;left and right controls for the slide&ndash;&gt;-->
-    <!--<a class="carousel-control-prev" href="#demo" data-slide="prev">-->
-        <!--<span class="carousel-control-prev-icon"></span>-->
-    <!--</a>-->
-    <!--<a class="carousel-control-next" href="#demo" data-slide="next">-->
-        <!--<span class="carousel-control-next-icon" margin left="25"></span>-->
-    <!--</a>-->
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1" ></li>
+      <li data-target="#demo" data-slide-to="2" ></li>
+    </ul>
+        <!--Slideshow starts here -->
+    <div class="container carousel-inner no-padding">
 
-      <!--<li data-target="#demo" data-slide-to="0" class="active"></li>-->
-      <!--<li data-target="#demo" data-slide-to="1" ></li>-->
-      <!--<li data-target="#demo" data-slide-to="2" ></li>-->
-    <!--</ul>-->
-        <!--&lt;!&ndash;Slideshow starts here &ndash;&gt;-->
-    <!--<div class="container carousel-inner no-padding">-->
+      <div class="carousel-item active">
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+       </div>
 
-      <!--<div class="carousel-item active">-->
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-                <!--<h5 class="card-title">Card title</h5>-->
-                <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-       <!--</div>-->
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
 
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
 
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-          <!--<a class="carousel-control-prev" href="#demo" data-slide="prev">-->
-        <!--<span class="carousel-control-prev-icon"></span>-->
-    <!--</a>-->
-    <!--<a class="carousel-control-next" href="#demo" data-slide="next">-->
-        <!--<span class="carousel-control-next-icon"></span>-->
-    <!--</a>-->
-      <!--</div>-->
-
-
-
-      <!--<div class="carousel-item">-->
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-                <!--<h5 class="card-title">Card title</h5>-->
-                <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-
-          <!--</div>-->
-        <!--</div>-->
-
-      <!--</div>-->
-
-  <!--</div>-->
-    <!--</div>-->
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+      </div>
 
 
-  <!--</div>-->
 
- <!--</section>-->
+      <div class="carousel-item">
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+    </div>
+
+
+  </div>
+     {% else %}
+<div class="container text-center">
+    <h1 class="title text-center">The Specialists</h1>
+     <div class="row text-center">
+        <div class="col-md-4 doctors">
+                   <img src = "{% static 'images/doctor_01.jpg' height=100px %}" class="doctors-img" />
+                    <h4>Dr. Sandeep Shakya</h4>
+                    <p>ENT Specialist</p>
+        </div>
+        <div class="col-md-4 doctors">
+         <img src = "{% static 'images/doctor_02.jpg' %}" class="doctors-img">
+            <h4>Dr. Kanchan Singh</h4>
+            <p>Gynaecologist</p>
+        </div>
+        <div class="col-md-4 doctors">
+       <img src = "{% static 'images/doctor_03.jpg' %}" class="doctors-img" />
+      <h4>Dr. Lily Baniya</h4>
+      <p>Cardiologist</p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary">All available doctors</button>
+    </div>
+     {% endif %}
+
+ </section>
 
 
 
 <!--Testimonials section-->
 
-<!--<section id="testimonials">-->
-  <!--<div class="container testi">-->
-    <!--<h1 class="title text-center">WHAT OUR USERS SAY?</h1>-->
-    <!--<div class="row offset-1">-->
-      <!--<div class="col-md-5 testimonials">-->
-        <!--<p>Thanks for your easy and friendly webpage. It led us to predict my symptoms at an early stage.</p>-->
-         <!--<img src = "{% static 'images/testi_01.png' %}" />-->
-        <!--<p class="user-details"><b>Bishal Adhikari</b><br>Manager of Racer</br></p>-->
-        <!--</div>-->
-        <!--<div class="col-md-5 testimonials">-->
-          <!--<p>Thankyou for the detailed appointment information of doctors, it helped me reach on time.</p>-->
-          <!--<img src = "{% static 'images/testi_02.png' %}" />-->
-          <!--<p class="user-details"><b>Susan Shrestha</b><br>Worker at XYZ ltd.</br></p>-->
-          <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</section>-->
+<section id="testimonials" >
+  <div class="container testi">
+    <h1 class="title text-center">WHAT OUR USERS SAY?</h1>
+    <div class="row offset-1">
+      <div class="col-md-5 testimonials">
+        <p>Thanks for your easy and friendly webpage. It led us to predict my symptoms at an early stage.</p>
+         <img src = "{% static 'images/testi_01.png' %}" />
+        <p class="user-details"><b>Bishal Adhikari</b><br>Manager of Racer</br></p>
+        </div>
+        <div class="col-md-5 testimonials">
+          <p>Thankyou for the detailed appointment information of doctors, it helped me reach on time.</p>
+          <img src = "{% static 'images/testi_02.png' %}" />
+          <p class="user-details"><b>Susan Shrestha</b><br>Worker at XYZ ltd.</br></p>
+          </div>
+    </div>
+    </div>
+    </section>
         <!------accountsection-->
 <section id="user-profile">
   <div class="container text-center">
@@ -360,16 +384,17 @@
   </div>
 </section>
     <!--contact section-->
-    <!--<section id="social-media">-->
-      <!--<div class="container text-center">-->
-        <!--<p>FIND US ON SOCIAL MEDIA</p>-->
-        <!--<div class="social-icons">-->
-          <!--<a href="https://www.facebook.com/"><img src = "{% static 'images/fb-logo(1).png' %}" /></a>-->
-          <!--<a href="https://www.instagram.com/"><img src = "{% static 'images/fb-logo(2).png' %}" /></a>-->
-          <!--<a href="https://www.twitter.com/"><img src = "{% static 'images/fb-logo(4).png' %}" /></a>-->
-        <!--</div>-->
-      <!--</div>-->
-<!--</section>-->
+    <section id="social-media">
+      <div class="container text-center">
+        <p>FIND US ON SOCIAL MEDIA</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><img src = "{% static 'images/fb-logo(1).png' %}" /></a>
+          <a href="https://www.instagram.com/"><img src = "{% static 'images/fb-logo(2).png' %}" /></a>
+          <a href="https://www.twitter.com/"><img src = "{% static 'images/fb-logo(4).png' %}" /></a>
+        </div>
+      </div>
+</section>
+
 <footer class="mastfoot mt-auto text-center">
   <div class="inner">
     <p>© Disease Predictor and Specialist Recommender.</p>

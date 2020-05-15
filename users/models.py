@@ -20,6 +20,7 @@ class Profile(models.Model):
         upload_to='profile_pics'
         )
 
+
     def __str__(self):
         return f'{self.user.username} Profile'
 
@@ -40,4 +41,8 @@ def create_user_profile(sender, instance, created, **kwargs):
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
+class UserReview(models.Model):
+    review=models.TextField()
 
+    def __str__(self):
+        return self.review

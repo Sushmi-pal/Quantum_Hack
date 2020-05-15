@@ -33,12 +33,16 @@ AccountView
 from about_us.views import (
 InfoView
 )
+from contact.views import (
+ContactView
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('pages.urls')),
     path('',views.home),
     path('index/', views.home, name='home'),
+    path('index.html/', views.home, name='home'),
     path('specialist/',include('specialist.urls')),
     re_path('specialist/$',include('specialist.urls')),
     path('specialist/search',include('specialist.urls')),
@@ -52,6 +56,8 @@ urlpatterns = [
     re_path(r'services/$',ServicePageView.as_view(),name='services'),
     path('account/',include('account.urls')),
     re_path(r'account/$',AccountView.as_view(),name='account'),
+    re_path(r'contact/$',ContactView.as_view(),name='contact'),
+    path('users/',include('users.urls')),
     path('register/',users_views.register ,name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('new/', views.new, name='new'),
