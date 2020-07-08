@@ -47,6 +47,10 @@ Please fork this project and send us a pull request.
 
 ## Authors
 
-* **Arjun Adhikari**
+* **Sushmita Palikhe**
+
+* **Siddhartha Shrestha**
+
+* **Neha Mahato**
 
 
