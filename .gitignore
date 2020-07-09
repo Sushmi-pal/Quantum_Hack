@@ -1,4 +1,5 @@
-
+ .idea/workspace.xml
+project/__pycache__/settings.cpython-37.pyc
 # Created by https://www.gitignore.io/api/django
 # Edit at https://www.gitignore.io/?templates=django
 
