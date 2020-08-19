@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-
     'pages.apps.PagesConfig',
     'specialist.apps.SpecialistConfig',
     'testimonials',
@@ -84,11 +83,14 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'doctor',
+        'USER': 'postgres',
+        'PASSWORD': 'major',
+        'HOST': 'localhost',
+        'PORT': '5432', 
+        }
 }
-
 
 
 # DATABASES = {
