@@ -1,7 +1,7 @@
  {% load static %}
  <html lang="en">
     <head>
-        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico.png' %}"/>
         <title>Disease Predictor and Specialist Recommender</title>
 
         {% if messages %}
@@ -14,12 +14,6 @@
 
 
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-
-
-
-
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -102,9 +96,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p class="promo"> <a href="" class="typewrite" data-period="2000" data-type='[ "Welcome to Life Care", "We Care Your Health", "We are Expert!" ]'>
-                          <span class="wrap"></span>
-                          </a> </p>
+                        <div class="promo"><p> Disease Predictor </p>
+                        <p>And</p>
+                        <p >Specialist Recommender</p>
+                    </div>
                     </div>
                     <div class="col-md-6 text-center">
                          <img src = "{% static 'images/phone.png' %}" />
@@ -113,7 +108,6 @@
             </div>
             <img src = "{% static 'images/wave.png' %}" class="bottom-img"/>
         </section>
- Aboutus section
         <section id="about-us">
     <div class="container">
       <h1 class="title text-center">WHY VISIT US?</h1>
@@ -130,7 +124,7 @@
           </ul>
         </div>
         <div class="col-md-6">
-           <img src = "{% static 'images/about-us.jpg' %}" class="about-us-img"/>
+           <img src = "{% static 'images/about-us.jpg' %}" class="about-us-img" />
         </div>
       </div>
     </div>
@@ -152,7 +146,6 @@
                     <p>On the basis of disease predicted,we provide you a detailed list of Specialist.</p>
                 </div>
               </div>
-              <button type="button" class="btn btn-primary">All Services</button>
             </div>
           </section>
  <!-- doctor section -->
@@ -342,7 +335,7 @@
       <p>Cardiologist</p>
         </div>
       </div>
-      <button type="button" class="btn btn-primary">All available doctors</button>
+    <button type="button" class="btn btn-primary">All available doctors</button>
     </div>
      {% endif %}
 

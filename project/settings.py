@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'password_reset',
     'pages.apps.PagesConfig',
     'specialist.apps.SpecialistConfig',
     'testimonials',
@@ -84,13 +83,9 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'doctor',
-        'USER': 'postgres',
-        'PASSWORD': 'major',
-        'HOST': 'localhost',
-        'PORT': '5432', 
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+    }
 }
 
 
@@ -140,7 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL ='/images/'
-MEDIA_ROOT= os.path.join(BASE_DIR,'images')
+MEDIA_ROOT= os.path.join(BASE_DIR, 'images')
 
 # STATICFILES_DIRS=( os.path.join(BASE_DIR,'static'),)
 
