@@ -1,5 +1,5 @@
 {% load static %}
-{% block content %}	
+{% block content %}
 
 
 {% load crispy_forms_tags %}
@@ -7,7 +7,7 @@
 
 <head>
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
-	 <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+	 <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>Sign in</title>
      <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <i class="fa fa-bars"></i>
                 </button>
-                
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -103,13 +103,13 @@
 			</legend>
 			{{ u_form | crispy }}
 			{{ p_form | crispy }}
-			
+
 		</fieldset>
 		<div class="form-group">
 			<button class="btn btn-primary" type="submit">Update</button>
 
 		</div>
-		
+
 	</form>
 </div>
 <div class="container">
@@ -125,5 +125,5 @@
     </div>
 </body>
 
-{% endblock content %}	
+{% endblock content %}
 </html>
