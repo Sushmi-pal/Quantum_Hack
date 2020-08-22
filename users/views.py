@@ -6,8 +6,9 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.db import transaction
 from .models import UserReview
-
-
+from django.contrib.auth import authenticate,login,logout
+from .forms import LoginForm
+from django.contrib.auth.decorators import login_required
 
 
 from . import models
@@ -26,9 +27,33 @@ def register(request):
 # def reset(request):
 #     return render(request,'password_reset_form.html')
 
+def LoginView(request):
+    if request.method=='POST':
+        form=LoginForm(request.POST)
+        if form.is_valid():
+
+            user=authenticate(username=form.cleaned_data['username'],
+                              password=form.cleaned_data['password'])
+            if user:
+                print('user',user)
+                login(request,user)
+                return redirect('/profile/')
+            else:
+                print('Not authenticated')
+    elif request.method=='GET':
+        if request.user.is_authenticated:
+            return redirect('/profile/')
+        form=LoginForm()
+    return render(request,'users/login.html',{'form':form})
+
+def LogoutView(request):
+    logout(request)
+    return redirect('/login/')
+
+
 @login_required
 @transaction.atomic
-def profile(request):
+def ProfileView(request):
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
@@ -39,7 +64,7 @@ def profile(request):
                 request,
                 f'Your profile has been updated successfully'
             )
-            return redirect('profile')
+            return redirect('users:profile')
 
     else:
         u_form = UserUpdateForm(instance=request.user)
@@ -52,6 +77,20 @@ def profile(request):
     return render(request, 'users/profile.html', context)
 
 
+"""
+class  receive:
+    if request.method == 'POST':
+        #form or something to direct the flow
+        if form.is_valid():
+            save_it= form.save()
+            save_it.save()
+            messages.success(request, f'confirmation of reservation sent to your email')
+            return redirect('Here we need direct somewhere after successfull reservation')
+    else:
+         #form or something to direct the flow
+    
+    return render(request,'')
+    """
 """
 class  receive:
     if request.method == 'POST':

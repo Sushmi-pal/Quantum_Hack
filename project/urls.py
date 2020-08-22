@@ -23,7 +23,7 @@ from htmlcss import views
 from users import views as users_views
 # from django.contrib.auth import views as auth_views
 # from django.contrib.auth.views import  login,
-
+from users.views import register,LoginView,LogoutView,ProfileView
 from services.views import (
 ServicePageView
 )
@@ -39,7 +39,13 @@ ContactView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('search/',include('disease.urls')),
     path('',include('pages.urls')),
+    # path('users/',include('users.urls')),
+    path('profile/',ProfileView,name='profile'),
+    path('login/',LoginView,name='login'),
+    path('logout/',LogoutView,name='logout'),
+    path('register/',register,name='register'),
     path('',views.home),
     path('index/', views.home, name='home'),
     path('index.html/', views.home, name='home'),
@@ -57,12 +63,12 @@ urlpatterns = [
     path('account/',include('account.urls')),
     re_path(r'account/$',AccountView.as_view(),name='account'),
     re_path(r'contact/$',ContactView.as_view(),name='contact'),
-    path('users/',include('users.urls')),
-    path('register/',users_views.register ,name='register'),
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+
+    # path('register/',users_views.register ,name='register'),
+    # path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('new/', views.new, name='new'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
-    path('accounts/profile/', users_views.profile, name='profile'),
+    # path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    # path('accounts/profile/', users_views.profile, name='profile'),
     path('password_reset/done/', auth_views.PasswordResetCompleteView.as_view(
                       template_name='registration/password_reset_done.html'),
                        name='password_reset_done'),
@@ -75,7 +81,7 @@ urlpatterns = [
                       template_name='registration/password_reset_complete.html'),
                        name='password_reset_complete'),
 
-] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
 
 if settings.DEBUG:
