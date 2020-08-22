@@ -21,13 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2548ea7f-7c9e-4c3a-90a1-f5d83c1e126d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mainpagestyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mainpagestyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/feedback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/searchdisease.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/searchdisease.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
