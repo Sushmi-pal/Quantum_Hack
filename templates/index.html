@@ -38,22 +38,23 @@
                       <a class="nav-link" href="/index">HOME </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="{% url 'disease' %}">Search Disease</a>
+                      <a class="nav-link" href="{% url 'disease' %}">SEARCH DISEASE</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/specialist">Search Doctors</a>
+                        <a class="nav-link" href="/specialist">SEARCH DOCTORS</a>
                       </li>
                    <li class="nav-item">
-                    <a class="nav-link" href="{% url 'feedback' %}">Feedback</a>
+                    <a class="nav-link" href="{% url 'feedback' %}">FEEDBACK</a>
                    </li>
                       <li class="nav-item">
-                      <a class="nav-link" href="/profile">Profile</a>
+                      <a class="nav-link" href="/profile">PROFILE</a>
                     </li>
                                           <li class="nav-item">
-                      <a class="nav-link" href="/logout">Logout{{user.username}}</a>
+                      <a class="nav-link" href="/logout">LOGOUT {{user.username}}</a>
                     </li>
                       {%else%}
+                      <li>
                         <a class="nav-link" href="index.html">HOME </a>
                     </li>
                     <li class="nav-item">
@@ -194,7 +195,7 @@
         <span class="carousel-control-prev-icon"></span>
     </a>
     <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon" margin left="25"></span>
+        <span class="carousel-control-next-icon"></span>
     </a>
 
       <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -348,12 +349,12 @@
       <div class="col-md-5 testimonials">
         <p>Thanks for your easy and friendly webpage. It led us to predict my symptoms at an early stage.</p>
          <img src = "{% static 'images/testi_01.png' %}" />
-        <p class="user-details"><b>Bishal Adhikari</b><br>Manager of Racer</br></p>
+        <p class="user-details"><b>Bishal Adhikari</b><br>Manager of Racer</p>
         </div>
         <div class="col-md-5 testimonials">
           <p>Thankyou for the detailed appointment information of doctors, it helped me reach on time.</p>
           <img src = "{% static 'images/testi_02.png' %}" />
-          <p class="user-details"><b>Susan Shrestha</b><br>Worker at XYZ ltd.</br></p>
+          <p class="user-details"><b>Susan Shrestha</b><br>Worker at XYZ ltd.</p>
           </div>
     </div>
     </div>
@@ -365,11 +366,9 @@
       <div class="account text-center">
         <h4>New Member?</h4>
         <button type="button" class="btn btn-primary"><a href="/register"><font color="white"> Register Here</font></a></button>
-
       </div>
     <h4>Already A Member?</h4>
-    <button type="button" class="btn btn-primary"><a href="/login"><font color="white"> Login Here</font></a></button></div>
-
+    <button type="button" class="btn btn-primary"><a href="/login"><font color="white"> Login Here</font></a></button>
   </div>
 </section>
     <!--contact section-->

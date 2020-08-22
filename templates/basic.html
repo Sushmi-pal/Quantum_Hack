@@ -1,7 +1,7 @@
 {% load static %}
  <html lang="en">
     <head>
-        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico.png' %}"/>
         <title>Disease Predictor and Specialist Recommender</title>
         <style>{% block css %} {% endblock %}</style>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -26,20 +26,20 @@
                       <a class="nav-link" href="/index">HOME </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="{% url 'disease' %}">Search Disease</a>
+                      <a class="nav-link" href="{% url 'disease' %}">SEARCH DISEASE</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/specialist">Search Doctors</a>
+                        <a class="nav-link" href="/specialist">SEARCH DOCTORS</a>
                       </li>
                    <li class="nav-item">
-                    <a class="nav-link" href="{% url 'feedback' %}">Feedback</a>
+                    <a class="nav-link" href="{% url 'feedback' %}">FEEDBACK</a>
                    </li>
                       <li class="nav-item">
-                      <a class="nav-link" href="/profile">Profile</a>
+                      <a class="nav-link" href="/profile">PROFILE</a>
                     </li>
                                           <li class="nav-item">
-                      <a class="nav-link" href="/logout">Logout{{user.username}}</a>
+                      <a class="nav-link" href="/logout">LOGOUT {{user.username}}</a>
                     </li>
                       {%else%}
                       <a class="nav-link" href="/index">HOME </a>
