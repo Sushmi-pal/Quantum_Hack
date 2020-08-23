@@ -64,7 +64,7 @@ def ProfileView(request):
                 request,
                 f'Your profile has been updated successfully'
             )
-            return redirect('users:profile')
+            return redirect('profile')
 
     else:
         u_form = UserUpdateForm(instance=request.user)
