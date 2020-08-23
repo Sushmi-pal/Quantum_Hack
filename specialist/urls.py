@@ -1,12 +1,13 @@
 from django.contrib import admin
 from django.urls import path,include
-from . import views
+from .views import doc,search,select,DoctorDetailView
 
 urlpatterns = [
 
-    path('',views.doc,name='doctors'),
-    path('search',views.search,name='search'),
-    path('select',views.select,name='select'),
+    path('',doc,name='doctors'),
+    path('search',search,name='search'),
+    path('select',select,name='select'),
+    path('detail/<int:pk>/',DoctorDetailView.as_view(),name='detail'),
 
 
 
