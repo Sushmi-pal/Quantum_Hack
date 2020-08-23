@@ -91,7 +91,7 @@
                 }
                 input{
                     margin-bottom: 0.5rem;
-                    padding: 0px 4px;
+                    padding: 0px 6px;
                     width: 30%;
                     height: 32px;
                 }
@@ -107,7 +107,7 @@
                   margin-bottom: 20px;
                   margin-left: 8px;
                   text-decoration: none;
-                  outline: none;
+                  outline: none !important;
                }
                #updatebutton:hover{
                       font-size: 21px;
@@ -123,12 +123,11 @@
                       margin: 30px 0px 0px 28px;
                }
            </style>
-           <div class="container mt-5">
+           <div class="container">
                <h1 class="title text-center">Personal Information</h1>
                         <div class="row">
-
                           <div class="col-12">
-                            <div class="media mb-5">
+                            <div class="media mb-4">
                                 <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
                                 <div class="media-body mb-4">
                                     <h2 class="account-heading">{{ user.username }}</h2>

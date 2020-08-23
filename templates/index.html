@@ -149,170 +149,6 @@
 
 
  <section id="doctors">
-{% if user.is_authenticated %}
-     {% load static %}
-     <style>
-      .col-md-3
-          {
-          display: inline-block;
-          margin-left:-4px;
-          }
-          .carousel-indicators .active {
-          background-color: blue;
-          margin-left:22px;
-          margin-right: 22px;
-            }
-          .col-md-3 img{
-          width:100%;
-          height:auto;
-          }
-          body .carousel-indicator li{
-          background-color: blue;
-          }
-          body .carousel-indicators{
-          bottom: 0;
-          }
-          body .carousel-control-prev-icon;
-          body .carousel-control-next-icon{
-          background-color: blue;
-          margin-left:10px;
-          padding-left: 5px;
-          padding-right: 5px;
-          }
-           body .no-padding{
-           padding-left: 0;
-           padding-right: 0;
-           }
-           </style>
-  <div class="container text-center">
-    <h1 class="title text-center">The Specialists</h1>
-    <div id="demo" class="carousel slide" data-ride="carousel">
-
-    <ul class="carousel-indicators">
-
-    <!--left and right controls for the slide-->
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
-
-      <li data-target="#demo" data-slide-to="0" class="active"></li>
-      <li data-target="#demo" data-slide-to="1" ></li>
-      <li data-target="#demo" data-slide-to="2" ></li>
-    </ul>
-        <!--Slideshow starts here -->
-    <div class="container carousel-inner no-padding">
-
-      <div class="carousel-item active">
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-       </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-          <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
-      </div>
-
-
-
-      <div class="carousel-item">
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-  </div>
-    </div>
-
-
-  </div>
-     {% else %}
 <div class="container text-center">
     <h1 class="title text-center">The Specialists</h1>
      <div class="row text-center">
@@ -332,9 +168,8 @@
       <p>Cardiologist</p>
         </div>
       </div>
-    <button type="button" class="btn btn-primary">All available doctors</button>
+   <a href="/specialist/">   <button type="button" class="btn btn-primary">All available doctors </button></a>
     </div>
-     {% endif %}
 
  </section>
 
@@ -361,6 +196,9 @@
     </section>
         <!------accountsection-->
 <section id="user-profile">
+    {% if user.is_authenticated %}
+    <br>
+    {% else %}
   <div class="container text-center">
     <h1 class="title">MEMBERSHIP DETAILS</h1>
       <div class="account text-center">
@@ -370,6 +208,7 @@
     <h4>Already A Member?</h4>
     <button type="button" class="btn btn-primary"><a href="/login"><font color="white"> Login Here</font></a></button>
   </div>
+    {% endif %}
 </section>
     <!--contact section-->
     <section id="social-media">

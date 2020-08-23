@@ -110,7 +110,7 @@ body
 #doctors
 {
     background-image: url("/static/images/doctors-bg.png");
-    padding: 55px 0;
+    padding: 20px 0;
 }
 
 .doctors-img{
@@ -189,7 +189,7 @@ margin-bottom: 20px;
 /*----testimonials----*/
 #testimonials{
     background-image: linear-gradient(to right,#2895f1,#0060b1);
-    margin: 100px 0;
+    margin: 100px 0px 20px 0px;
     padding-top: 100px;
 }
 .testimonials{
