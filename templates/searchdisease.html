@@ -1,4 +1,139 @@
 {% extends 'basic.html' %}
        {% block body %}
+<style>
+h1{
+color: #3A3A3A;
+}
+     #search_button{
+  background: linear-gradient(to right,#2895f1,#0060b1);
+  color: white;
+  font-weight: 600;
+  border-radius: 0.6em;
+  border: none;
+  padding: 10px 40px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 8px;
+  text-decoration: none;
+  outline: none;
+  }
+  #search_button:hover{
+      font-size: 21px;
+  }
+  .container {
+  padding: 0rem 8rem;
+}
 
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+  td, th {
+    vertical-align: middle;
+  }
+  </style>
+<section id="search_disease" class="py-2">
+                      <div class="container">
+                        <h1 class="title text-center">Search Disease</h1>
+                        <div class="row">
+                          <div class="col-12">
+                            <table class="table table-bordered">
+                              <thead>
+                            <h4 class="subtit mb-2" >Select the symptoms you have: </h4>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Chest tightness</label>
+                                    </div>
+                                  </td>
+
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label" for="customCheck2">Cough</label>
+                                    </div>
+                                  </td>
+
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                        <label class="custom-control-label" for="customCheck3">Distress respiratory</label>
+                                    </div>
+                                  </td>
+
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                        <label class="custom-control-label" for="customCheck4">Non-productive cough </label>
+                                    </div>
+                                  </td>
+
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                        <label class="custom-control-label" for="customCheck5">Pleuritic pain</label>
+                                    </div>
+                                  </td>
+
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                        <label class="custom-control-label" for="customCheck6">Productive cough</label>
+                                    </div>
+                                  </td>
+
+                                </tr>
+                              <tr>
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                        <label class="custom-control-label" for="customCheck7">Shortness of breath</label>
+                                    </div>
+                                  </td>
+
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                        <label class="custom-control-label" for="customCheck8">Symptom aggravating factors</label>
+                                    </div>
+                                  </td>
+
+                                </tr>
+                               <tr>
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                        <label class="custom-control-label" for="customCheck9">Wheezing</label>
+                                    </div>
+                                  </td>
+
+                                  <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                        <label class="custom-control-label" for="customCheck10">Fever</label>
+                                    </div>
+                                  </td>
+
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                          <button id= "search_button"type="button" class="Submit" align="center">Submit</button>
+                      </div>
+                    </section>
+
+<!----footer-->
+<footer class="mastfoot mt-auto text-center">
+  <div class="inner">
+    <p>© Disease Predictor and Specialist Recommender.</p>
+  </div>
+</footer>
         {% endblock %}

@@ -182,7 +182,8 @@ body
 }
 .about-us-img{
 height: 333px;
-width: 570px;
+width: 490px;
+margin-top: 10px;
 margin-bottom: 20px;
 }
 /*----testimonials----*/
@@ -238,12 +239,6 @@ margin-bottom: 20px;
 #user-profile{
     background: #f8f9fa;
     padding: 50px 0;
-}
-#account .btn-primary{
-    box-shadow: none;
-    padding: 8px 25px;
-    border: none;
-    border-radius: 20px;
 }
 
 .account{
