@@ -1,0 +1,19 @@
+{% extends 'basic.html' %}
+{% block body %}
+<div class="detail">
+<h1>Doctor's Detail</h1>
+
+    <div class="image-side">
+<img src="/images/{{object.identification_image}}" width="500px" height="500px" >
+</div>
+<h2>
+Doctor's name:{{object.name}}<br>
+Location:{{object.location}}<br>
+Fee:{{object.fee}}<br>
+Description:{{object.desc}}<br>
+
+</h2></div>
+
+
+
+{% endblock %}

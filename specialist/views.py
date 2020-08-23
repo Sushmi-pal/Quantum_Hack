@@ -8,6 +8,7 @@ from django.db.models import Q
 from django.contrib.postgres.search import SearchQuery
 from . import views
 from django.views.generic import TemplateView
+from django.views.generic import DetailView
 # Create your views here.
 def doc(request):
     doctors = doctor_profile.objects.all()
@@ -44,6 +45,9 @@ def select(request):
     para={'disease':disease, 'query': query}
     return render(request,'select.html', para)
 
+class DoctorDetailView(DetailView):
+    model = doctor_profile
+    template_name='specialist/doctor_profile_detail.html'
 
 
 
