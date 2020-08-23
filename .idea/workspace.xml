@@ -20,8 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2548ea7f-7c9e-4c3a-90a1-f5d83c1e126d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/searchdisease.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/searchdisease.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,16 +56,21 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/media" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images/profile_pics" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\final\images\profile_pics" />
+      <recent name="C:\final\media\profile_pics" />
       <recent name="C:\final\media" />
       <recent name="C:\Users\sushm\Desktop\Disease-Predictor-master\static" />
       <recent name="C:\Users\sushm\Desktop\Disease-Predictor-master\pages" />
-      <recent name="C:\Users\sushm\Desktop\Disease-Predictor-master\statics" />
-      <recent name="C:\Users\sushm\Desktop\project\statics\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\final\images" />
+      <recent name="C:\final\media" />
+      <recent name="C:\final\media\profile_pics" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -86,6 +97,7 @@
       <workItem from="1598056833380" duration="227000" />
       <workItem from="1598060549430" duration="2981000" />
       <workItem from="1598063560895" duration="2733000" />
+      <workItem from="1598149998705" duration="1020000" />
     </task>
     <servers />
   </component>
@@ -109,10 +121,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597995373255" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598064168200">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598144264213">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598064168200" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598144264213" />
     <state x="129" y="55" key="MergeDialog" timestamp="1597937634853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

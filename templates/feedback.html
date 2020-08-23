@@ -55,11 +55,13 @@ color: #3A3A3A;
                           <div class="container mt-5 mb-5">
                             <div class="row form-container">
                               <div class="col-md-6">
-                                <form>
+                                <form method="post">
+                                    {% csrf_token %}
                                   <div class="form-group pl-2 pb-3">
                                       <label for="name">Name</label>
                                     <input id="name"
                                       type="text"
+                                      name="name"
                                       class="form-control p-0 pl-2"
                                       aria-describedby="nameHelp"
                                       placeholder="Your Name" required="required"
@@ -69,26 +71,25 @@ color: #3A3A3A;
                                       <label for="email">Email</label>
                                     <input id="email"
                                       type="email"
+                                      name="email"
                                       class="form-control p-0 pl-2"
                                       aria-describedby="emailHelp"
-                                      placeholder="Email" required="required"
+                                      placeholder="Email"  required="required"
                                     />
                                   </div>
                                   <div class="form-group pl-2 pb-3">
-                                      <label for="messages">Message</label>
-                                    <textarea id="messages"
+                                      <label for="message">Message</label>
+                                    <textarea id="message"
                                       class="form-control messagebox p-0 pl-3 pt-2"
+                                      name="message"
                                       rows="8"
                                       placeholder="Message"
-                                      style="resize: none !important;" required="required"
+                                      style="resize: none !important;"  required="required"
                                     ></textarea>
                                   </div>
                                   <button id="contact"
                                     type="submit"
-                                    class="text-center btn btn-primary btn-contact "
-                                  >
-                                    Submit
-                                  </button>
+                                          class="text-center btn btn-primary btn-contact " name="submit"> Submit</button>
                                 </form>
                               </div>
                               <br>
