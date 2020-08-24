@@ -1,53 +1,125 @@
 {% extends 'basic.html' %}
+{% load static %}
 {% block body %}
 <style>
-    .profile-tab label{
-        font-weight: 600;
-        float: left;
+ *{
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	color: #484848;
+}
+h2 { font-size: 36px;}
+h3 { font-size: 24px;}
+h4 a { color: #484848;}
+h4 { font-size: 18px;}
+p {
+	letter-spacing: normal;
+	line-height: 23px;
+	margin: 0 0 20px;
+}
+a {text-decoration: none;}
+a:hover, a:focus, a:active {
+	outline: none;
+	text-decoration: none !important;
+    color: #0062cc;
+}
+.tg-box {
+    width: 100%;
+    float: left;
+    padding: 30px;
+}
+.tg-box + .tg-box{border-top: 1px solid #ddd;}
+.card-view {
+    background-color: #fff;
+    border: 1px solid hsla(0,0%,43%,.25);
+    box-shadow: 2px 5px 15px hsla(0,0%,43%,.14);
+    padding: 16px !important;
+    margin-bottom: 10px;
+}
+.card{
+        background: #FFFFFF;
+        border: 1px solid hsla(0,0%,43%,.25);
+        box-sizing: border-box;
+        box-shadow: 2px 5px 15px hsla(0,0%,43%,.14);
+        border-radius: 0px 0px 10px 10px;
     }
-    .profile-tab span{
-          float: right;
-          font-weight: 600;
-          color: #0062cc;
+.tg-icontitle {
+    width: 100%;
+    float: left;
+    margin: 0 0 30px;
+}
+.tg-icontitle h3 {
+    margin: 0;
+    color: #484848;
+    font-size: 20px;
+    line-height: 20px;
+    position: relative;
+    font-weight: 500;
+}
+.doclist li {
+	line-height: 28px;
+	list-style: disc inside none;
+}
+.doclist ul li { margin-left: 20px; }
+.tg-servicelocation .tg-directpost{
+    width: 100%;
     }
 </style>
-<div class="detail text-center">
-     <h1 class="title text-center">Doctor's Detail</h1>
+<div class="container">
+    <h1 class="title text-center mb-2">Doctor's Detail</h1>
+        <div class="row">
+         <div class="col-lg-1">
+         </div>
+         <div class="col-lg-4 gauche">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/{{object.identification_image}}" class="card-img-top" alt="doctors">
+                <div class="card-body text-center">
+                  <h4 class="word">{{object.name}}</h4>
+                  <p class="card-text">{{object.desc}}</p>
+                </div>
+              </div>
+         </div>
 
-    <div class="image-side mb-4">
-<img src="/images/{{object.identification_image}}" width="450px" height="300px" >
-</div>
- <div class="profile-tab text-center">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-5"></div>
-                                    <div class="col-md-2">
-                                        <label>Doctor's name:</label>
-                                        <span>{{object.name}}</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-5"></div>
-                                    <div class="col-md-2">
-                                        <label>Location:</label>
-                                        <span>{{object.location}}</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-5"></div>
-                                    <div class="col-md-2">
-                                        <label>Fee:</label>
-                                     <span>{{object.fee}}</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-5"></div>
-                                    <div class="col-md-2">
-                                        <label>Description:</label>
-                                        <span>{{object.desc}}</span>
-                                    </div>
-                                </div>
-                            </div>
- </div>
+         <div class="col-lg-6 corps">
+            <div class="tg-box card-view mb-3">
+                <div class="tg-icontitle">
+                    <h3> <img src = "{% static 'images/user-solid.svg' %}" width="16px;" height="16px;" style="margin-right: 10px;" />Profile</h3>
+                   </div>
+                    <div class="tg-description" style="max-height: none;">
+                       <p>{{object.desc}}&nbsp;</p>
+                    </div>
+                     <div class="doctor-details">
+                         <ul class="doclist">
+                             <li class="doclist"><span>NMC Number</span> - 10430</li>
+                              <li class="doclist"><span>Qualification</span> - MBBS, Nepal</li>
+                               <li class="doclist"><span>Speciality</span> - MD Psychiatry</li>
+                               <li class="doclist"><span>Fee</span> - {{object.fee}}</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="tg-box available-locations card-view">
+                       <div class="tg-icontitle">
+                        <h3><img src = "{% static 'images/location-arrow-solid.svg' %}" width="16px;" height="16px;" style="margin-right: 10px;"/>Available Locations</h3>
+                       </div>
+                       <div class="tg-servicelocations">
+                           <div class="tg-servicelocation">
+                                        <div class="tg-directinfo">
+                                            <div class="tg-directposthead">
+                                            <!--   <h4><a href="/hospital/manoshastra-counseling-and-research-center">Manoshastra Counseling And Research Center</a></h4> -->
+                                                 <div class="tg-subjects">{{object.location}}</div>
+                                                 <p style="margin-bottom: 0px;"> 01-5548002</p>
+                                               </div>
+                                            <!--   <div class="tg-description" style="max-height: none;">
+                                               </div> -->
+                                           </div>
+                                       </div>
+                                   </div>
+                        </div>
+         </div>
+         <div class="col-lg-1">
+         </div>
+        </div>
+       </div>
 
 {% endblock %}
