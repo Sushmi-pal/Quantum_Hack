@@ -91,9 +91,9 @@ a:hover, a:focus, a:active {
                     </div>
                      <div class="doctor-details">
                          <ul class="doclist">
-                             <li class="doclist"><span>NMC Number</span> - 10430</li>
-                              <li class="doclist"><span>Qualification</span> - MBBS, Nepal</li>
-                               <li class="doclist"><span>Speciality</span> - MD Psychiatry</li>
+                             <li class="doclist"><span>NMC Number</span> - {{object.nmc_num}}&nbsp;</li>
+                              <li class="doclist"><span>Qualification</span> - {{object.qualification}}&nbsp;</li>
+                               <li class="doclist"><span>Speciality</span> - {{object.speciality}}&nbsp;</li>
                                <li class="doclist"><span>Fee</span> - {{object.fee}}</li>
                            </ul>
                        </div>
@@ -108,7 +108,7 @@ a:hover, a:focus, a:active {
                                             <div class="tg-directposthead">
                                             <!--   <h4><a href="/hospital/manoshastra-counseling-and-research-center">Manoshastra Counseling And Research Center</a></h4> -->
                                                  <div class="tg-subjects">{{object.location}}</div>
-                                                 <p style="margin-bottom: 0px;"> 01-5548002</p>
+                                                 <p style="margin-bottom: 0px;"> {{object.phone}}&nbsp;</p>
                                                </div>
                                             <!--   <div class="tg-description" style="max-height: none;">
                                                </div> -->
