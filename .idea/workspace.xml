@@ -21,12 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2548ea7f-7c9e-4c3a-90a1-f5d83c1e126d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialist/templates/specialist/doctor_profile_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/templates/specialist/doctor_profile_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/searchdisease.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/searchdisease.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +49,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/pycharm/Bookland" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/iw-acad-remotepharmacy-be" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -100,6 +94,7 @@
       <workItem from="1598063560895" duration="2733000" />
       <workItem from="1598149998705" duration="2065000" />
       <workItem from="1598160897363" duration="1793000" />
+      <workItem from="1598316019015" duration="72000" />
     </task>
     <servers />
   </component>
@@ -123,10 +118,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597995373255" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598161948372">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598316073913">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598161948372" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598316073913" />
     <state x="129" y="55" key="MergeDialog" timestamp="1597937634853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
