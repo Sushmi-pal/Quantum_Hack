@@ -1,6 +1,6 @@
 # Disease Predictor
 
-A web app for heart disease prediction, diabetes prediction and breast cancer prediciton using Machine Learning based on the Kaggle Datasets. 
+A web app for general disease prediction, using Machine Learning based on the Kaggle Datasets. 
 
 ## Getting Started
 
@@ -12,22 +12,18 @@ Follow the instructions to run the system on your local machine :
 
 
 
-Install the virtual environment.
+Install the followings
 ```
-pip install virtualenv
+pip install django-crispy-forms
+pip install psycopg2
+pip install pillow
+
 ```
 Then,
 ```
-virtualenv myenv
+python manage.py migrate
 ```
-After that, activate the virtual environment
-```
-source myenv/bin/activate
-```
-Subsequently, install the dependencies on your local machine.
-```
-pip install -r requirement.txt
-```
+
 Finally, run the application.
 ```
 python manage.py runserver
@@ -48,6 +44,6 @@ Please fork this project and send us a pull request.
 
 * **Siddhartha Shrestha**
 
-* **Neha Mahato**
+* **Neha Mahto**
 
 
