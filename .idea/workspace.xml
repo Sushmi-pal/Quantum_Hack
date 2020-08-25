@@ -21,12 +21,78 @@
   <component name="ChangeListManager">
     <list default="true" id="2548ea7f-7c9e-4c3a-90a1-f5d83c1e126d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialist/templates/specialist/doctor_profile_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/templates/specialist/doctor_profile_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcss/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcss/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcss/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcss/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcss/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcss/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcss/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcss/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/details.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/feedback.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/mainpagestyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/searchdisease.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/searchdoctor.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/css/mainpagestyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/css/searchdisease.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/css/stylelogin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/E.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/about-us.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/doctor_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/doctor_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/doctor_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/doctors-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/fb-logo(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/fb-logo(2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/fb-logo(3).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/fb-logo(4).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/logo1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/logoo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/logooo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/service-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/service-icon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/service-icon3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/testi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/testi_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/testi_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/testi_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/wave.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statics/images/wavee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/choose.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/choosereg.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/details.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/doctor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/doctordetail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/feedback.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/logout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/searchdisease.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/searchdisease.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/searchdoctor.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/select.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/select.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/testimonials.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/testimonials.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +121,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/pycharm/Bookland" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
