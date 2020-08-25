@@ -6,13 +6,16 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.db import transaction
 from .models import UserReview
-from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm
 from django.contrib.auth.decorators import login_required
-
-
+from django.shortcuts import render
+from django.http import HttpResponse
 from . import models
 from .models import Profile
+def home(request):
+    return render(request, 'index.html')
+
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -24,27 +27,30 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
+
+
 # def reset(request):
 #     return render(request,'password_reset_form.html')
 
 def LoginView(request):
-    if request.method=='POST':
-        form=LoginForm(request.POST)
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
         if form.is_valid():
 
-            user=authenticate(username=form.cleaned_data['username'],
-                              password=form.cleaned_data['password'])
+            user = authenticate(username=form.cleaned_data['username'],
+                                password=form.cleaned_data['password'])
             if user:
-                print('user',user)
-                login(request,user)
+                print('user', user)
+                login(request, user)
                 return redirect('/profile/')
             else:
                 print('Not authenticated')
-    elif request.method=='GET':
+    elif request.method == 'GET':
         if request.user.is_authenticated:
             return redirect('/profile/')
-        form=LoginForm()
-    return render(request,'users/login.html',{'form':form})
+        form = LoginForm()
+    return render(request, 'users/login.html', {'form': form})
+
 
 def LogoutView(request):
     logout(request)
@@ -88,7 +94,7 @@ class  receive:
             return redirect('Here we need direct somewhere after successfull reservation')
     else:
          #form or something to direct the flow
-    
+
     return render(request,'')
     """
 """
@@ -102,13 +108,15 @@ class  receive:
             return redirect('Here we need direct somewhere after successfull reservation')
     else:
          #form or something to direct the flow
-    
+
     return render(request,'')
     """
+
+
 def review(request):
-    con=UserReview.objects.all()
-    sub=Profile.objects.all()
+    con = UserReview.objects.all()
+    sub = Profile.objects.all()
     sus = request.POST['query']
     models.UserReview.objects.create(review=sus)
-    param = {'sus': sus,'con':con}
-    return render(request,'review.html',param)
+    param = {'sus': sus, 'con': con}
+    return render(request, 'review.html', param)

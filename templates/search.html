@@ -2,26 +2,23 @@
 {% block css %}
       .col-md-3
           {
-          display: inline-block;
-          margin-left:-4px;
+              display: inline-block;
+              margin-left:-4px;
           }
           .carousel-indicators .active {
-          background-color: blue;
-          margin-left:22px;
-          margin-right: 22px;
+              background-color: blue;
+              margin-left:22px;
+              margin-right: 22px;
             }
             .card-body {
-        <!-- -ms-flex: 1 1 auto;-->
-        <!--flex: 1 1 auto;-->
-        <!--min-height: 180px;-->
-        padding: 1.25rem;
-        height:286px;
-        width:180px;
-}
+                padding: 1.25rem;
+                height:286px;
+                width:180px;
+          }
           .col-md-3 img {
             width:255px;
             height:355px;
-}
+          }
           }
           body .carousel-indicator li{
           background-color: blue;
@@ -46,14 +43,6 @@
 <section id="doctors">
   <div class="container text-center">
     <h1 class="title text-center">Search Results</h1>
-      <!--<form method="get" action="/specialist/search" class="form-inline my-2 my-lg-0">-->
-      <!--<input class="form-control mr-sm-2" type="search" name="query" id="query" placeholder="Search" aria-label="Search">-->
-      <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-
-    <!--</form>-->
-      <!--<a href="/specialist/search">Search</a>-->
-
-
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
 
@@ -82,7 +71,8 @@
           <li>Try different keywords.</li>
           <li>
               Try fewer keywords
-          </li></ul>
+          </li>
+        </ul>
         {% endif %}
       <div class="carousel-item active">
         <div class="col-xs-3 col-sm-3 col-md-3">
@@ -113,103 +103,8 @@
           {% endif %}
           {% endfor %}
     </div>
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-          <!--<a class="carousel-control-prev" href="#demo" data-slide="prev">-->
-        <!--<span class="carousel-control-prev-icon"></span>-->
-    <!--</a>-->
-    <!--<a class="carousel-control-next" href="#demo" data-slide="next">-->
-        <!--<span class="carousel-control-next-icon"></span>-->
-    <!--</a>-->
-      <!--</div>-->
-
-
-
-      <!--<div class="carousel-item">-->
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-                <!--<h5 class="card-title">Card title</h5>-->
-                <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-
-        <!--<div class="col-xs-3 col-sm-3 col-md-3">-->
-          <!--<div class="card" style="width: 18rem;">-->
-            <!--<img src='{% static "pages/sample.jpg" %}' class="card-img-top" alt="...">-->
-            <!--<div class="card-body">-->
-              <!--<h5 class="card-title">Card title</h5>-->
-              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-              <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-            <!--</div>-->
-
-          <!--</div>-->
-        <!--</div>-->
-
-      <!--</div>-->
-
-  <!--</div>-->
     </div>
-
-
   </div>
   </div>
-
  </section>
 {% endblock %}
