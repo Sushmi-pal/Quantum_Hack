@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2548ea7f-7c9e-4c3a-90a1-f5d83c1e126d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disease/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disease/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disease/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/templates/disease/checkdisease.html" beforeDir="false" afterPath="$PROJECT_DIR$/disease/templates/disease/checkdisease.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +34,20 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="d5590748-eb35-4318-ade3-eade9236ee2d" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JupyterTrust" id="372c5f5b-69ac-4ec3-9136-4270f07388ed" />
   <component name="ProjectId" id="1g56UL5v7UtZVj1OmxdigwQ1XDp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -54,23 +58,27 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.12.54" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/nodejs/node.exe" />
+    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../../Program Files/nodejs/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Neha\PycharmProjects\final\static\css" />
+      <recent name="C:\final" />
+      <recent name="C:\final\images\profile_pics" />
+      <recent name="C:\final\media\profile_pics" />
+      <recent name="C:\final\media" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Neha\PycharmProjects\final\static\css" />
       <recent name="C:\final\specialist\templates\specialist" />
       <recent name="C:\final\images" />
       <recent name="C:\final\media" />
       <recent name="C:\final\media\profile_pics" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\final" />
-      <recent name="C:\final\images\profile_pics" />
-      <recent name="C:\final\media\profile_pics" />
-      <recent name="C:\final\media" />
-      <recent name="C:\Users\sushm\Desktop\Disease-Predictor-master\static" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -104,6 +112,7 @@
       <workItem from="1598487185367" duration="3330000" />
       <workItem from="1598494276703" duration="4646000" />
       <workItem from="1598504363323" duration="1971000" />
+      <workItem from="1598517671206" duration="3073000" />
     </task>
     <servers />
   </component>
@@ -123,6 +132,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="395" y="91" key="#Inspections" timestamp="1598518013558">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1598518013558" />
     <state x="460" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598496400632">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -131,10 +144,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1597995373255" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598490406551">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="521" y="134" key="FileChooserDialogImpl" timestamp="1598518624935">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598490406551" />
+    <state x="521" y="134" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598518624935" />
     <state x="129" y="55" key="MergeDialog" timestamp="1597937634853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -143,13 +157,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="321" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1598341036409" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1598487286218">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="207" y="9" key="SettingsEditor" timestamp="1598519407438">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598487286218" />
+    <state x="207" y="9" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598519407438" />
     <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598341033222">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598341033222" />
+    <state x="415" y="172" key="jetbrains.nodejs.interpreters-dialog" timestamp="1598518626564">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="415" y="172" key="jetbrains.nodejs.interpreters-dialog/0.0.1536.824@0.0.1536.824" timestamp="1598518626564" />
   </component>
 </project>
