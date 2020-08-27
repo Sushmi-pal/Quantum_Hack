@@ -283,7 +283,7 @@ $("#predict").click(function () {
         $("#href").attr("href","https://www.google.com/search?q="+ disease +"");
 
 
-        document.getElementById('consultdoctor').innerText = data["consultdoctor"];
+        // document.getElementById('consultdoctor').innerText = data["consultdoctor"];
 
       }
 
@@ -387,10 +387,10 @@ $("#predict").click(function () {
   <div id="resultdiv" style="display: none;" >
         <div class="text-center">
               <div class="card" id="predicted-data">
-                    <div>
-                            <span class="diseasefield" >Patient name : {{ user.patient.name }}</span>
-                            <span class="diseasefield" >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Age : {{ user.patient.age }} </span>
-                    </div>
+<!--                    <div>-->
+<!--                            <span class="diseasefield" >Patient name : {{ user.patient.name }}</span>-->
+<!--                            <span class="diseasefield" >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Age : {{ user.patient.age }} </span>-->
+<!--                    </div>-->
                     <span class="diseasefield" >predicted disease is : </span><span class="diseasefield" id="diseasefield" style="color: #092700; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span> <br>
                     <br>
                     <span class="diseasefield">confidence score of :  </span>
@@ -419,7 +419,7 @@ $("#predict").click(function () {
 <div class="mx-auto text-center " style="width:350px">
   
      
-        <div >  <form action="consult_a_doctor" method="GET">
+        <div >  <form action=/specialist" method="GET">
             {% csrf_token %} 
             <button id="consultbtn" type="submit" class="btn btn-primary"> Consult a <span id="consultdoctor"  name="consultdoctor" > </span> doctor</button>
         <br><br>
