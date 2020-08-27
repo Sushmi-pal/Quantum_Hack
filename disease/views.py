@@ -27,24 +27,27 @@ def checkdisease(request):
     symptoms=[]
     with open('symptoms.csv', 'r') as csvfile:
         readline=csvfile.readlines()
+
         for line in readline:
             texts.append(line.split(',"')[0])
         for i in texts:
             symptoms.append(i[1:-1])
+    csvfile.close()
+
+    diseasel=[]
+    disease=[]
+    with open('405symptom.csv') as csvdisease:
+        readdisease = csvdisease.readlines()
+        for line in readdisease:
+            diseasel.append(line.split(',"')[0])
+        for i in diseasel:
+            disease.append(i[3:-1])
+    csvdisease.close()
 
 
-    diseaselist = ['Fungal infection', 'Allergy', 'GERD', 'Chronic cholestasis', 'Drug Reaction', 'Peptic ulcer diseae',
-                   'AIDS', 'Diabetes ',
-                   'Gastroenteritis', 'Bronchial Asthma', 'Hypertension ', 'Migraine', 'Cervical spondylosis',
-                   'Paralysis (brain hemorrhage)',
-                   'Jaundice', 'Malaria', 'Chicken pox', 'Dengue', 'Typhoid', 'hepatitis A', 'Hepatitis B',
-                   'Hepatitis C', 'Hepatitis D',
-                   'Hepatitis E', 'Alcoholic hepatitis', 'Tuberculosis', 'Common Cold', 'Pneumonia',
-                   'Dimorphic hemmorhoids(piles)',
-                   'Heart attack', 'Varicose veins', 'Hypothyroidism', 'Hyperthyroidism', 'Hypoglycemia',
-                   'Osteoarthristis',
-                   'Arthritis', '(vertigo) Paroymsal  Positional Vertigo', 'Acne', 'Urinary tract infection',
-                   'Psoriasis', 'Impetigo']
+
+
+    diseaselist = sorted(disease)
 
     symptomslist = sorted(symptoms)
 
