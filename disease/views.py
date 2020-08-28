@@ -13,7 +13,8 @@ from .models import  diseaseinfo
 
 #loading trained_model
 
-
+import joblib as jb
+model = jb.load('models.p')
 
 
 # Create your views here.
@@ -260,11 +261,11 @@ def checkdisease(request):
             # request.session['doctortype'] = consultdoctor
 
             patientusername=request.user
-            puser = User.objects.get(username=patientusername)
+            user = User.objects.get(username=patientusername)
 
             # saving to database.....................
 
-            patient = puser.patient
+
             diseasename = predicted_disease
             no_of_symp = inputno
             symptomsname = psymptoms
@@ -278,6 +279,4 @@ def checkdisease(request):
 
             print("disease record saved sucessfully.............................")
 
-            return JsonResponse({'predicteddisease': predicted_disease, 'confidencescore': confidencescore,
-                                 "consultdoctor": consultdoctor})
-
+            return JsonResponse({'predicteddisease': predicted_disease ,'confidencescore':confidencescore , "consultdoctor": consultdoctor})

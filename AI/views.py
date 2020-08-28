@@ -35,6 +35,6 @@ class call_model(APIView):
             response = {"Prediction":disease[0],
                         'Probab':disease[1]}
 
-            return JsonResponse(response)
+            return render(request,'disease/checkdiseasee.html',response)
 
 
