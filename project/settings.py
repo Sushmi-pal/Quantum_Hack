@@ -32,6 +32,9 @@ INSTALLED_APPS = [
     'testimonials',
     'contact',
     'disease',
+    'rest_framework',
+    'AI',
+
 
 
 ]
@@ -76,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'predict',
         'USER':'postgres',
-        'PASSWORD':'major',
+        'PASSWORD':'sid562554',
         'PORT':'5432',
         'HOST':'localhost'
     }
@@ -142,4 +145,5 @@ EMAIL_PORT=587
 EMAIL_USE_TLS=True
 DEFAULT_FROM_EMAIL='Major Project Team <securesally@gmail.com>'
 
+MODELS = os.path.join(BASE_DIR,'AI/models')
 # smuyotdsrsgrtkxj
