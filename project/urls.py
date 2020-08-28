@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('search/',include('disease.urls')),
     path('',include('pages.urls')),
+    path('predict/',include('AI.urls')),
     # path('users/',include('users.urls')),
     path('profile/',ProfileView,name='profile'),
     path('login/',LoginView,name='login'),
