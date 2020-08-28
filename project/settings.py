@@ -77,6 +77,7 @@ DATABASES = {
         'NAME': 'predict',
         'USER':'postgres',
         'PASSWORD':'major',
+        'PORT':'5432',
         'HOST':'localhost'
     }
 }
