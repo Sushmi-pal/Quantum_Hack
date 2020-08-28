@@ -279,4 +279,5 @@ def checkdisease(request):
 
             print("disease record saved sucessfully.............................")
 
-            return JsonResponse({'predicteddisease': predicted_disease ,'confidencescore':confidencescore , "consultdoctor": consultdoctor})
+            a= JsonResponse({'predicteddisease': predicted_disease ,'confidencescore':confidencescore , "consultdoctor": consultdoctor})
+            return render(request,'disease/checkdisease.html',json.loads(a))

@@ -27,6 +27,7 @@ class call_model(APIView):
             diseaselist = request.GET.get('diseaselist')
             data = make_data(diseaselist).reshape(1,-1)
 
+            print(data)
             result = AiConfig.model.predict_proba(data)[0]
             out=dict(zip(model.classes_,result))
             sort_orders = sorted(out.items(), key=lambda x: x[1], reverse=True)
@@ -34,6 +35,7 @@ class call_model(APIView):
 
             response = {"Prediction":disease[0],
                         'Probab':disease[1]}
+            print(response)
 
             return render(request,'disease/checkdiseasee.html',response)
 
