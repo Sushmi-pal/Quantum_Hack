@@ -17,7 +17,7 @@ def doc(request):
     nSlides=n//4+ceil((n/4)-(n//4))
     params = {'no_of_slides':nSlides,'range':range(1,nSlides),'speciality':doctors}
 
-    return render(request,'doctor.html',params)
+    return render(request,'doctor.html', params)
 
 def search(request):
     # query=request.GET['query']
@@ -49,7 +49,30 @@ class DoctorDetailView(DetailView):
     model = doctor_profile
     template_name='specialist/doctor_profile_detail.html'
 
+# def category(request):
+#     allProds = []
+#     catprods = doctor_profile.objects.all()
+#     cats = {item['category'] for item in catprods}
+#     for cat in cats:
+#         prod = doctor_profile.objects.filter(category=cat)
+#         n = len(prod)
+#         nSlides = n // 4 + ceil((n / 4) - (n // 4))
+#         allProds.append([prod, range(1, nSlides), nSlides])
+#
+#     # params = {'no_of_slides':nSlides, 'range': range(1,nSlides),'product': products}
+#     # allProds = [[products, range(1, nSlides), nSlides],
+#     #             [products, range(1, nSlides), nSlides]]
+#     params = {'allProds': allProds}
+#     return render(request, 'specialist/category.html', params)
 
+def cat(request):
+    doctors = doctor_profile.objects.all()
+    print(doctors)
+    # n=len(doctors)
+    # nSlides=n//4+ceil((n/4)-(n//4))
+    # params = {'no_of_slides':nSlides,'range':range(1,nSlides),'speciality':doctors}
+
+    return render(request,'specialist/category.html', {'doctors':doctors})
 
 
 

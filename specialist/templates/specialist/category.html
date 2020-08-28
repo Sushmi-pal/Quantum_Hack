@@ -1,0 +1,57 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block body %}
+<h1 class="title text-center">The Specialists</h1>
+<form method="get" action="/specialist/search" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" name="query" id="query" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+    </form>
+<section class="py-5" style="background: #F9F9F9;">
+  {% for doc in doctors %}
+      <div class="barber_header d-flex justify-content-center mb-5">
+  </div>
+<div class="barbers">
+  <div class="row col-12 d-flex align-items-center justify-content-center">
+    <div class="col-lg-3 d-flex align-items-center justify-content-center">
+      <div class="card mb-3" style="width: 18rem;">
+        <img src="/images/{{doc.identification_image}}" class="card-img-top" alt="doctors">
+        <div class="card-body text-center">
+          <h4 class="word pink">{{doc.name}}</h4>
+          <p class="card-text">{{doc.desc}}</p>
+          <div class="Book ">
+            <a href="/specialist/detail/{{doc.id}}" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+<!--    <div class="col-lg-3 d-flex align-items-center justify-content-center">-->
+<!--      <div class="card mb-3" style="width: 18rem;">-->
+<!--        <img src="../images/v5/Rectangle 23.png" class="card-img-top" alt="doctors">-->
+<!--        <div class="card-body text-center">-->
+<!--          <h4 class="word pink"> Brand Philips</h4>-->
+<!--          <p class="card-text">Lorem ipsum dolor sit amet, elit ut consectetur adipiscing elit ut aliquam elit ut</p>-->
+<!--          <div class="Book ">-->
+<!--            <a href="#appointment" class="btn btn-primary">Book Now</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-lg-3 d-flex align-items-center justify-content-center">-->
+<!--      <div class="card mb-3" style="width: 18rem;">-->
+<!--        <img src="../images/v5/Rectangle 25.png" class="card-img-top" alt="doctors">-->
+<!--        <div class="card-body text-center">-->
+<!--          <h4 class="word pink">Sharan Jamain</h4>-->
+<!--          <p class="card-text">Lorem ipsum dolor sit amet, elit ut consectetur adipiscing elit ut aliquam elit ut</p>-->
+<!--          <div class="Book ">-->
+<!--            <a href="#appointment" class="btn btn-primary">View details</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+</div>
+</section>
+{% endblock %}
