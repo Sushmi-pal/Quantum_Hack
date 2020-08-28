@@ -25,29 +25,42 @@ def checkdisease(request):
     import csv
     texts = []
     symptoms=[]
-    with open('symptoms.csv', 'r') as csvfile:
+    with open('new.csv', 'r') as csvfile:
         readline=csvfile.readlines()
 
         for line in readline:
-            texts.append(line.split(',"')[0])
-        for i in texts:
-            symptoms.append(i[1:-1])
+            linesplit=line.split(',')[1]
+            if linesplit!='Symptom':
+                texts.append(linesplit)
+            for one in texts:
+                if one not in symptoms:
+                    symptoms.append(one)
+
+
+
+
     csvfile.close()
 
-    diseasel=[]
+
     disease=[]
-    with open('405symptom.csv') as csvdisease:
-        readdisease = csvdisease.readlines()
-        for line in readdisease:
-            diseasel.append(line.split(',"')[0])
-        for i in diseasel:
-            disease.append(i[3:-1])
+    diseaseselect=[]
+    with open('new.csv', 'r') as csvdisease:
+        readline = csvdisease.readlines()
+
+        for line in readline:
+            linesplitdisease = line.split(',')[2]
+            if linesplitdisease!='Disease':
+                disease.append(linesplitdisease)
+            for i in disease:
+                if i not in diseaseselect:
+                    diseaseselect.append(i)
+
     csvdisease.close()
 
 
 
 
-    diseaselist = sorted(disease)
+
 
     symptomslist = sorted(symptoms)
 
@@ -55,7 +68,7 @@ def checkdisease(request):
 
     if request.method == 'GET':
 
-        return render(request, 'disease/checkdisease.html', {"list2": alphabaticsymptomslist})
+        return render(request, 'disease/checkdisease.html', {"list2": symptomslist})
 
 
 
@@ -108,34 +121,68 @@ def checkdisease(request):
 
             # consult_doctor codes----------
 
-            #   doctor_specialization = ["Rheumatologist","Cardiologist","ENT specialist","Orthopedist","Neurologist",
-            #                             "Allergist/Immunologist","Urologist","Dermatologist","Gastroenterologist"]
+            #   doctor_specialization = ["Cardiologist","ENT specialist","Orthopedist","Neurologist",
+            #                             "Allergist/Immunologist","Urologist","Dermatologist","Gastroenterologist and Hepatologist",
+            #                            "Dentist","Dietician","General  Physician","Gynaecologist","Hematologist","Lymphologist"
+            #                            "Nephrologist","Neurosurgeon","Oncologist","Ophthalmologist",,"Psychiatrist"
+            #                            "Speech therapist","Pulmonologist"]
+            #
+            #
+            Allergist_Immunologist = ['Allergy', 'Pneumonia', 'Common Cold', 'Tuberculosis', 'Malaria', 'Dengue',
+                                      'Typhoid']
 
-            Rheumatologist = ['Osteoarthristis', 'Arthritis']
+            Cardiologist = ['Hypertension', 'tricuspid valve insufficiency', 'mitral valve insufficiency',
+                            'cardiomyopathy', 'myocardial infarction(heartattack)', 'coronary heart disease',
+                            'coronary arteriosclerosis', 'sinus tachycardia ', 'aortic valve stenosis',  'pericardial effusion', 'effusion pericardial', 'Endocarditis', 'congestive heart failure ',
+                            'failure heart congestive',  'hypertensive disease']
+            Dentist = ['Oralcandidiasis']
+            Dermatologist = ['carcinoma', 'cellulitis', 'Exanthema']
+            Dietician = ['obesity morbid', 'Obesity']
+            ENT_specialist  = ["upper respiratory infection", "deglutition disorder"]
+            Gastroenterologist  = ['cirrhosis', 'colitis', 'Diverticulitis',
+                                                                 'Diverticulosis', 'Gastritis', 'gastroenteritis',
+                                                                 'gastroesophageal reflux disease', 'cirrhosis',
+                                                                 'Hepatitis', 'hepatitis B', 'hepatitis C']
+            Hepatologist=['cirrhosis', 'colitis', 'Diverticulitis',
+                                                                 'Diverticulosis', 'Gastritis', 'gastroenteritis',
+                                                                 'gastroesophageal reflux disease', 'cirrhosis',
+                                                                 'Hepatitis', 'hepatitis B', 'hepatitis C']
+            Physician = ["HIV", "acquired immuno-deficiency syndrome", "Hypoglycemia",
+                         "Degenerative polyarthritis", "Diabetes", "Hyperlipidemia", "Hyperglycemia",
+                         "Hypercholesterolemia", "Hyperbilirubinemia",  "hiv infections",  "ischemia","ketoacidosis diabetic", "peripheral vascular disease"]
+            Gynaecologist = ['fibroid tumor']
+            Hematologist = ['anemia', 'Thrombocytopaenia', 'sickle cell anemia', 'Pancytopenia', 'bacteremia']
 
-            Cardiologist = ['Heart attack', 'Bronchial Asthma', 'Hypertension ']
+            Lymphologist = ['lymphatic diseases', 'Lymphoma']
+            Nephrologist = ['chronic kidney failure', 'failure kidney', 'insufficiency renal', 'kidney disease',
+                             'acute kidney failure ', 'pyelonephritis']
+            Neurologist = ["Alzheimer's disease", "accident cerebrovascular" ,"Paranoia","Neuropathy",
+                           "Delirium","delusion","dementia","Encephalopathy","Epilepsy","parkinson disease",
+                           "Schizophrenia","tonic - clonic epilepsy","transient ischemic attack","tonic - clonic seizures"]
 
-            ENT_specialist = ['(vertigo) Paroymsal  Positional Vertigo', 'Hypothyroidism']
+            Neurosurgeon = ["Cerebrovascular accident", "Hemiparesis"]
 
-            Orthopedist = []
+            Oncologist = ['melanoma', 'adenocarcinoma', 'carcinoma breast', 'carcinoma colon', 'carcinoma of lung', 'carcinoma prostate', 'malignant tumor of colon', 'Malignant\xa0neoplasms', 'Neoplasm', 'primary carcinoma of the liver cells', 'malignant neoplasm of prostate', 'malignant neoplasm of lung', 'malignant neoplasm of breast', 'neoplasm metastasis']
+            Ophthalmologist = ['Glaucoma']
+            Orthopedist = ['arthritis', 'Osteoporosis']
+            Psychiatrist = ["affect labile", "anxiety state", "chronic alcoholic","bipolar disorder", "intoxication(alcoholic intoxication)", "Dependence",
+                            "depression mental"," depressive disorder","suicide attempt","confusion", "personality disorder", "psychotic disorder"]
 
-            Neurologist = ['Varicose veins', 'Paralysis (brain hemorrhage)', 'Migraine', 'Cervical spondylosis']
+            Speechtherapist = ["aphasia",]
 
-            Allergist_Immunologist = ['Allergy', 'Pneumonia',
-                                      'AIDS', 'Common Cold', 'Tuberculosis', 'Malaria', 'Dengue', 'Typhoid']
+            Pulmonologist = ["Pneumocystis carini  pneumonia", "asthma", "bronchitis","carcinoma of lung", "edema pulmonary", "embolism pulmonary"
+                             "emphysema pulmonary",  "chronic obstructive airway disease","hypertension pulmonary", "systemic infection", "spasm bronchial",
+                             "Septicemia", "sepsis (invertebrate)", "respiratory failure",  "pneumonia", "aspiration","Paroxysmal dyspnea",  "overload fluid",  "Osteomyelitis",
+                             "Neutropenia", "infection", "influenza", "malignant neoplasm of lung"]
 
-            Urologist = ['Urinary tract infection',
-                         'Dimorphic hemmorhoids(piles)']
 
-            Dermatologist = ['Acne', 'Chicken pox', 'Fungal infection', 'Psoriasis', 'Impetigo']
+            Surgeon = ['adhesion', 'biliary calculus', 'carcinoma colon', 'cholecystitis', 'Hemorrhoids', 'colitis',
+                       'malignant tumor of colon', 'deep vein thrombosis', 'Thrombus', 'Hernia', 'Hernia hiatal',
+                       'Pancreatitis', 'cholelithiasis', 'decubitus ulcer', 'Pneumothorax']
+            Urologist = ['benign prostatic hypertrophy', 'carcinoma prostate', 'malignant neoplasm of prostate',
+                         'Incontinence', 'infection urinary tract']
 
-            Gastroenterologist = ['Peptic ulcer diseae', 'GERD', 'Chronic cholestasis', 'Drug Reaction',
-                                  'Gastroenteritis', 'Hepatitis E',
-                                  'Alcoholic hepatitis', 'Jaundice', 'hepatitis A',
-                                  'Hepatitis B', 'Hepatitis C', 'Hepatitis D', 'Diabetes ', 'Hypoglycemia']
 
-            if predicted_disease in Rheumatologist:
-                consultdoctor = "Rheumatologist"
 
             if predicted_disease in Cardiologist:
                 consultdoctor = "Cardiologist"
@@ -162,12 +209,57 @@ def checkdisease(request):
             elif predicted_disease in Gastroenterologist:
                 consultdoctor = "Gastroenterologist"
 
+            elif predicted_disease in Surgeon:
+                consultdoctor= "Surgeon"
+
+            elif predicted_disease in Pulmonologist:
+                consultdoctor= "Pulmonologist"
+
+            elif predicted_disease in Speechtherapist:
+                consultdoctor = "Speechtherapist"
+
+            elif predicted_disease in Psychiatrist:
+                consultdoctor = "Psychiatrist"
+
+            elif predicted_disease in Ophthalmologist:
+                consultdoctor = "Ophthalmologist"
+
+            elif predicted_disease in Oncologist:
+                consultdoctor = "Oncologist"
+
+            elif predicted_disease in Neurosurgeon:
+                consultdoctor = "Neurosurgeon"
+
+            elif predicted_disease in Nephrologist:
+                consultdoctor = "Nephrologist"
+
+            elif predicted_disease in Lymphologist :
+                consultdoctor = "Lymphologist "
+
+            elif predicted_disease in Hematologist:
+                consultdoctor = "Hematologist"
+
+            elif predicted_disease in Gynaecologist:
+                consultdoctor = "Gynaecologist"
+
+            elif predicted_disease in Physician:
+                consultdoctor = "Physician"
+
+            elif predicted_disease in Dietician :
+                consultdoctor = "Dietician "
+
+            elif predicted_disease in Hepatologist:
+                consultdoctor = "Hepatologist"
+
+            elif predicted_disease in Dentist:
+                consultdoctor = "Dentist"
+
             else:
                 consultdoctor = "other"
 
-            request.session['doctortype'] = consultdoctor
+            # request.session['doctortype'] = consultdoctor
 
-            patientusername = request.session['patientusername']
+            patientusername=request.user
             puser = User.objects.get(username=patientusername)
 
             # saving to database.....................
@@ -178,7 +270,7 @@ def checkdisease(request):
             symptomsname = psymptoms
             confidence = confidencescore
 
-            diseaseinfo_new = diseaseinfo(patient=patient, diseasename=diseasename, no_of_symp=no_of_symp,
+            diseaseinfo_new = diseaseinfo(patient=user, diseasename=diseasename, no_of_symp=no_of_symp,
                                           symptomsname=symptomsname, confidence=confidence, consultdoctor=consultdoctor)
             diseaseinfo_new.save()
 
