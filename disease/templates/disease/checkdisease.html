@@ -1,17 +1,17 @@
 {% extends "basic.html" %}
 {% load static %}
-
+ 
 {% block body %}
-
+ 
 <style>
     #predict{
     position: static;
     width: 100px;
     padding: 5px;
     text-align: center;
-
+ 
 }
-
+ 
 #predicted-data{
   margin-top: 5% !important;
   width: 40%;
@@ -22,49 +22,49 @@
   text-shadow: -5px 5px 6px white;
   box-shadow: 3px 1px 3px 0px #607D8B;
   display:inline-block;
-
+ 
 }
-
-
-
+ 
+ 
+ 
 #inputsym{
-
+ 
    position: fixed;
    right: 100px;
 }
-
+ 
 .symptoms{
   border:ridge rgb(150, 177, 199);
   margin: 2px;
   display: block ;
   text-align: center;
   padding: 0px !important;
-
+ 
   background-color: #fdffff;
   text-shadow: 0px 1px 20px rgba(3, 169, 244, 0.78);
   box-shadow: 0px 8px 16px 0px rgba(78, 191, 243, 0.05);
-
+ 
 }
-
+ 
 #symptoms-box{
 position: static;
 margin-top: 5%;
 margin-left: 20%;
 margin-right: 20%;
 text-align: center;
-
+ 
 background-color: #e9ecef !important;
 min-height: 300px;
-
+ 
 padding: 10px 10px 10px 10px;
-
+ 
 }
-
+ 
 .card-body{
   margin-left: auto ;
   margin-right: auto ;
-
-
+ 
+ 
 }
 /*  ------------------------------------------------------------*/
 /* Dropdown Button */
@@ -79,39 +79,39 @@ padding: 10px 10px 10px 10px;
     border: none;
     cursor: pointer;
   }
-
+ 
   /* Dropdown button on hover & focus */
   .dropbtn:hover, .dropbtn:focus {
     background-color: #2980B9;
   }
-
+ 
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     left:40%;
-
+ 
   }
   #container-dropdown{
-
-
+ 
+ 
     min-width: 1130px;
     min-height: 200px;
   }
-
+ 
   /* Dropdown Content (Hidden by Default) */
   .drop-content {
     left:10%;
     right: 10%;
     display: none;
     background-color: #fdffff;
-
+ 
     text-shadow: 0px 1px 20px rgb(7, 97, 231);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-
+ 
   }
-
-
+ 
+ 
 .dropdown-item {
   position: relative;
   min-width: 100px ;
@@ -119,78 +119,78 @@ padding: 10px 10px 10px 10px;
   width: auto !important;
   display:inline-block ;
   cursor: pointer;
-
+ 
   clear: both;
   text-align: center;
   border: 0;
-
+ 
   margin: 10px !important;
-
+ 
   background-color: #fdffff;
   text-shadow: 0px 1px 20px rgba(3, 169, 244, 0.78);
   box-shadow: 0px 8px 16px 0px rgba(3, 169, 244, 0.05);
-
+ 
   line-height: 2;
   padding: 4px !important;
-
+ 
 }
-
+ 
   /* Links inside the dropdown
   .dropdown-content a {
-
+ 
   }*/
-
+ 
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: rgb(90, 181, 241);
   }
-
-
+ 
+ 
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container
    when the user clicks on the dropdown button) */
   .show {display:inline-block;}
-
-
+ 
+ 
   #searchbar{
     margin-left: 25%;
     padding:10px;
     border-radius: 10px;
-
+ 
     width: 30%;
 }
-
+ 
   #searchbardiv{
     padding:10px;
-
+ 
   }
 </style>
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
   <script>
-
+ 
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function Functionshow() {
-
+ 
   document.getElementById("searchbar").value = '';
   document.getElementById("myDropdown").classList.toggle("show");
    search_symptoms();
-
+ 
 }
-
-
+ 
+ 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.btn')) {
     if (!event.target.matches('.searchbardiv')){
       if (!event.target.matches('.searchbar')){
-
+ 
     var dropdowns = document.getElementsByClassName("drop-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
-
+ 
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
@@ -200,26 +200,26 @@ window.onclick = function(event) {
 }
 }
 }
-
+ 
   function Functionsymptoms(name) {
     var newItem = document.createElement("TEXTAREA");
     newItem.innerText = name;
     newItem.setAttribute("id","symptoms");
-
+ 
     newItem.setAttribute("class","symptoms");
     document.getElementById("sympbox").appendChild(newItem);
-
+ 
   }
-
-
+ 
+ 
   //var elements = document.getElementsByClassName("symptoms");
-
-
+ 
+ 
   function search_symptoms() {
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
     let x = document.getElementsByClassName('dropdown-item');
-
+ 
     for (i = 0; i < x.length; i++) {
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
             x[i].style.display="none";
@@ -229,74 +229,83 @@ window.onclick = function(event) {
         }
     }
 }
-
-
+ 
+ 
 $(document).ready( function(){
-
-
+ 
+ 
 $("#predict").click(function () {
   event.preventDefault();
-
+ 
   var symptoms = document.getElementsByClassName("symptoms");
   var noofsym = symptoms.length;
   var symlist=[];
-
+ 
   if(noofsym == 0){
      alert(" please add some symptoms ");
   }
-
+ 
   else {
-
+ 
   for(i=0;i<symptoms.length;i++){
     symlist[i]=symptoms[i].value;
   }
-
-
-
+  console.log(symlist);
+ 
+ 
+ 
   $("#resultdiv").show("slow");
-  $('html,body').animate({
-    scrollTop: $("#resultdiv").offset().top},
-    'slow');
-
-
-
-
-  $.ajax({
-      url: 'checkdisease',
-      type: "POST",
-      data: { "noofsym" : noofsym,
-              "symptoms" :symlist,
-              csrfmiddlewaretoken : $('input[name=csrfmiddlewaretoken]').val()
-      },
-      dataType: 'json',
-
-      success: function (data) {
-        document.getElementById('diseasefield').innerText = data["predicteddisease"];
-        document.getElementById('percentage').innerText = data["confidencescore"]+"%";
+ 
+ 
+  var sym = "";
+ 
+  for(i = 0 ; i < symlist.length; i++){
+ 
+    if(i == 0){
+ 
+      sym = `?diseaselist=${encodeURI(symlist[i])}`;
+      
+    }else{
+ 
+      sym += `&diseaselist=${encodeURI(symlist[i])}`;
+ 
+    }
+ 
+  }
+ 
+  console.log(sym)
+ 
+  fetch(`/predict${sym}`).then(res => res.json()).then(data => {
+ 
+    console.log(data);
+ 
+    document.querySelector("#diseasefield").innerText = data["Prediction"];
+        document.getElementById('resultConfidence').innerText = `${parseFloat(data["Probab"]).toFixed(2) * 100}`+"%";
         percent=data["confidencescore"];
         disease=data["predicteddisease"];
-
+ 
         $('#percentage').css('width', percent + "%");
-
-        document.getElementById('diseasesearch').innerText = data["predicteddisease"];
-
+ 
+        document.getElementById('diseasesearch').innerText = data["Prediction"];
+ 
         $("#href").attr("href","https://www.google.com/search?q="+ disease +"");
-
-
-        // document.getElementById('consultdoctor').innerText = data["consultdoctor"];
-
-      }
-
-    });
-
-  }
-
+ 
+ 
+ 
+ 
+ 
   });
-
-
-
+ 
+  
+ 
+  }
+ 
+  });
+ 
+ 
+ 
 });
-
+ 
 </script>    <!--
   
   <div class="dropdown">
@@ -309,8 +318,8 @@ $("#predict").click(function () {
       <a class="dropdown-item" href="#">Something else here</a>
     </div>
   </div> -->
-
-
+ 
+ 
   <div class="container">
     <br>
     <div class="text-center"> 
@@ -320,15 +329,15 @@ $("#predict").click(function () {
             <button onclick="Functionshow()" class="btn btn-primary dropdown-toggle">Add symptoms</button>
     </div>
   </div >
-
+ 
   <div id="myDropdown" class="drop-content">
-
+ 
         <div id="searchbardiv" class="searchbardiv">    
       
             <input id="searchbar" class="searchbar" onkeyup="search_symptoms()" type="text"
               name="search" placeholder=" Search symptoms.. "> <br>
         </div> 
-
+ 
         <div class="container" id="container-dropdown">
             {% for i in list2 %}
             
@@ -340,17 +349,17 @@ $("#predict").click(function () {
         
       
     
-
-
+ 
+ 
 <!-- 
-
+ 
 <div class="dropdown">
   
     <button onclick="Functionshow()" class="dropbtn">Add symptoms</button>
       
   </div >
     <div id="myDropdown" class="dropdown-content">
-
+ 
      <div id="searchbardiv" class="searchbardiv">    
       
     <input id="searchbar" class="searchbar" onkeyup="search_symptoms()" type="text"
@@ -381,9 +390,9 @@ $("#predict").click(function () {
              </div>
         </div>
   </div>
-
+ 
   <br>
-
+ 
   <div id="resultdiv" style="display: none;" >
         <div class="text-center">
               <div class="card" id="predicted-data">
@@ -394,17 +403,14 @@ $("#predict").click(function () {
                     <span class="diseasefield" >predicted disease is : {{response.Prediction}}</span><span class="diseasefield" id="diseasefield" style="color: #092700; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span> <br>
                     <br>
                     <span class="diseasefield">confidence score of :  </span>
-                    <span>
-                          <div class="progress" style="display: inline-block;width:140px">
-                              <div id="percentage" class="progress-bar" style="width: 0%">0%
-                              </div>
-                          </div>
+                    <span id = "resultConfidence">
+                          
                     </span>
-
+ 
                     </div>
               </div>
       <br> <br>
-
+ 
 <!--        <div class="text-center mt-4 mb-4"> -->
 <!--              <button class="btn btn-outline-success">-->
 <!--                    <a id="href" href="https://www.github.com/Sushmi-pal/final" target="_blank" rel="noopener noreferrer">Click here to know more about &nbsp -->
@@ -412,10 +418,10 @@ $("#predict").click(function () {
 <!--              </button>-->
 <!--        </div>-->
 <!--          <br><br>-->
-
+ 
         </div>
-
-
+ 
+ 
 <div class="mx-auto text-center " style="width:350px">
   
      
@@ -428,19 +434,19 @@ $("#predict").click(function () {
 
 
 </div>
-
+ 
          
-
+ 
 </div>
-
-
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 </div>
-
-
-
+ 
+ 
+ 
 {% endblock %}

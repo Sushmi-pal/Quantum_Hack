@@ -4,12 +4,18 @@ from .apps import AiConfig
 
 from django.http import JsonResponse
 from rest_framework.views import APIView
+from django.conf import settings
+
+import os
+import numpy as np
 
 import pandas as pd 
 # Create your views here.
 
 def make_data(sample):
-    X = pd.read_csv("models/data/all_x.csv")
+    path = os.path.join(settings.MODELS,'data/all_x.csv')
+
+    X = pd.read_csv(path)
     total_columns = X.columns
     disease_idx={}
     for i,dis in enumerate(total_columns):
@@ -23,20 +29,21 @@ def make_data(sample):
 
 class call_model(APIView):
     def  get(self,request):
-        if request.method == 'GET':
-            diseaselist = request.GET.get('diseaselist')
-            data = make_data(diseaselist).reshape(1,-1)
 
+        if request.method == 'GET':
+            diseaselist = request.GET.getlist('diseaselist')
+
+
+            data = make_data(diseaselist).reshape(1,-1)
             print(data)
             result = AiConfig.model.predict_proba(data)[0]
-            out=dict(zip(model.classes_,result))
+            out=dict(zip(AiConfig.model.classes_,result))
             sort_orders = sorted(out.items(), key=lambda x: x[1], reverse=True)
             disease=sort_orders[0]
 
             response = {"Prediction":disease[0],
                         'Probab':disease[1]}
             print(response)
-
-            return render(request,'disease/checkdiseasee.html',response)
+            return JsonResponse(response)
 
 
