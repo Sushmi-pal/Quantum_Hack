@@ -29,9 +29,11 @@ def make_data(sample):
 
 class call_model(APIView):
     def  get(self,request):
-        
+
         if request.method == 'GET':
-            diseaselist = request.GET.getlist('sympbox')
+            diseaselist = request.GET.getlist('diseaselist')
+
+
             data = make_data(diseaselist).reshape(1,-1)
             print(data)
             result = AiConfig.model.predict_proba(data)[0]
@@ -39,8 +41,8 @@ class call_model(APIView):
             sort_orders = sorted(out.items(), key=lambda x: x[1], reverse=True)
             disease=sort_orders[0]
 
-            response = {"predicteddisease":disease[0],
-                        'confidencescore':disease[1]}
+            response = {"Prediction":disease[0],
+                        'Probab':disease[1]}
             print(response)
             return JsonResponse(response)
 
