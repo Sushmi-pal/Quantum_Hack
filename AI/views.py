@@ -212,9 +212,10 @@ class call_model(APIView):
 
             print(response)
             return JsonResponse(response)
-print('Doctor',consultdoctor)
+
 # def consult(request):
-#     query = response[2]
+#     query = request.GET['resultSpecialist']
+#     print(query)
 #     if len(query) > 85:
 #         speciality = []
 #     else:
