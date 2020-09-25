@@ -26,7 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2548ea7f-7c9e-4c3a-90a1-f5d83c1e126d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile_pics/IMG_20200809_3.jpg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/profile_pics/IMG_20200809_3.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +57,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -116,6 +121,17 @@
       <workItem from="1598620174768" duration="286000" />
       <workItem from="1598620490563" duration="48000" />
       <workItem from="1598657142101" duration="1038000" />
+      <workItem from="1598688464501" duration="1860000" />
+      <workItem from="1598759504610" duration="1235000" />
+      <workItem from="1598771351295" duration="679000" />
+      <workItem from="1599031117924" duration="421000" />
+      <workItem from="1600651999118" duration="2496000" />
+      <workItem from="1600663276858" duration="46000" />
+      <workItem from="1600757652799" duration="1851000" />
+      <workItem from="1600760300480" duration="239000" />
+      <workItem from="1600760723392" duration="821000" />
+      <workItem from="1600765593577" duration="820000" />
+      <workItem from="1600997468490" duration="3781000" />
     </task>
     <servers />
   </component>
@@ -135,37 +151,37 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598496400632">
+    <state x="460" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600997931109">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="460" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1598496400632" />
+    <state x="460" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1600997931109" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598542587375">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598542587375" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1598657843036">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1600765791470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598657843036" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600765791470" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1598608254001">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1598608254001" />
-    <state x="129" y="55" key="MergeDialog" timestamp="1598529986923">
+    <state x="129" y="55" key="MergeDialog" timestamp="1598676892079">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1598529986923" />
-    <state x="321" y="125" key="MultipleFileMergeDialog" timestamp="1598529997783">
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1598676892079" />
+    <state x="321" y="125" key="MultipleFileMergeDialog" timestamp="1598676892123">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1598529997783" />
+    <state x="321" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1598676892123" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1598487286218">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598487286218" />
-    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598529955510">
+    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598676800931">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598529955510" />
+    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598676800931" />
   </component>
 </project>

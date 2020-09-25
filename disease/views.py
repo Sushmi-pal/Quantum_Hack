@@ -112,13 +112,14 @@ def checkdisease(request):
             predicted = model.predict(inputtest)
             print("predicted disease is : ")
             print(predicted)
-
+            print(type(predicted))
             y_pred_2 = model.predict_proba(inputtest)
             confidencescore = y_pred_2.max() * 100
             print(" confidence score of : = {0} ".format(confidencescore))
 
             confidencescore = format(confidencescore, '.0f')
             predicted_disease = predicted[0]
+
 
             # consult_doctor codes----------
 
@@ -183,7 +184,7 @@ def checkdisease(request):
             Urologist = ['benign prostatic hypertrophy', 'carcinoma prostate', 'malignant neoplasm of prostate',
                          'Incontinence', 'infection urinary tract']
 
-
+            print('Type of specialist',type(Cardiologist))
 
             if predicted_disease in Cardiologist:
                 consultdoctor = "Cardiologist"
