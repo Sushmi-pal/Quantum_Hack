@@ -1,1 +1,0 @@
-web: gunicorn diseasepredictor.wsgi
