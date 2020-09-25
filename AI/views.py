@@ -90,7 +90,7 @@ class call_model(APIView):
                             "depression mental", " depressive disorder", "suicide attempt", "confusion",
                             "personality disorder", "psychotic disorder"]
 
-            Speechtherapist = ["aphasia", ]
+            SpeechTherapist = ["aphasia", ]
 
             Pulmonologist = ["Pneumocystis carini  pneumonia", "asthma", "bronchitis", "carcinoma of lung",
                              "edema pulmonary", "embolism pulmonary"
@@ -149,9 +149,9 @@ class call_model(APIView):
 
                 consultdoctor = "Pulmonologist"
 
-            elif disease[0] in Speechtherapist:
+            elif disease[0] in SpeechTherapist:
 
-                consultdoctor = "Speechtherapist"
+                consultdoctor = "Speech Therapist"
 
             elif disease[0] in Psychiatrist:
 
@@ -203,7 +203,7 @@ class call_model(APIView):
 
             else:
 
-                consultdoctor = "other"
+                consultdoctor = "General Physician"
 
             response = {"Prediction":disease[0],
                         'Probab':disease[1],

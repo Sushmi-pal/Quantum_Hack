@@ -281,16 +281,17 @@ $("#predict").click(function () {
  
     document.querySelector("#diseasefield").innerText = data["Prediction"];
         document.getElementById('resultConfidence').innerText = `${parseFloat(data["Probab"]).toFixed(2) * 100}`+"%";
-        percent=data["confidencescore"];
-        disease=data["predicteddisease"];
+        document.getElementById('resultSpecialist').innerText = data["Consult"];
+
+
  
         $('#percentage').css('width', percent + "%");
  
         document.getElementById('diseasesearch').innerText = data["Prediction"];
  
         $("#href").attr("href","https://www.google.com/search?q="+ disease +"");
- 
- 
+
+
  
  
  
@@ -400,26 +401,18 @@ $("#predict").click(function () {
 <!--                            <span class="diseasefield" >Patient name : {{ user.patient.name }}</span>-->
 <!--                            <span class="diseasefield" >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Age : {{ user.patient.age }} </span>-->
 <!--                    </div>-->
-                    <span class="diseasefield" >predicted disease is : {{response.Prediction}}</span><span class="diseasefield" id="diseasefield" style="color: #092700; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span> <br>
+                    <span class="diseasefield" >Predicted disease is : {{response.Prediction}}</span>
+                    <span class="diseasefield" id="diseasefield" style="color: #092700; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span> <br>
                     <br>
-                    <span class="diseasefield">confidence score of :  </span>
-                    <span id = "resultConfidence">
-                          
-                    </span>
- 
-                    </div>
+                    <span class="diseasefield">Confidence score of :  </span>
+                    <span id = "resultConfidence" style="color: #092700 !important; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span>
+                    <br> <br>
+                    <span class="specialistfield" id="specialistfield">Consult :  </span>
+                    <span id = "resultSpecialist" style="color: #092700; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span>
               </div>
-      <br> <br>
- 
-<!--        <div class="text-center mt-4 mb-4"> -->
-<!--              <button class="btn btn-outline-success">-->
-<!--                    <a id="href" href="https://www.github.com/Sushmi-pal/final" target="_blank" rel="noopener noreferrer">Click here to know more about &nbsp -->
-<!--                    <span id="diseasesearch" style="color: crimson;"></span></a>-->
-<!--              </button>-->
-<!--        </div>-->
-<!--          <br><br>-->
- 
         </div>
+      <br> <br>
+  </div>
  
  
 <div class="mx-auto text-center " style="width:350px">
