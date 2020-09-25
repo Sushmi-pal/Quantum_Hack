@@ -11,7 +11,7 @@ import numpy as np
 
 import pandas as pd 
 # Create your views here.
-consultdoctor="doctor"
+
 def make_data(sample):
     path = os.path.join(settings.MODELS,'data/all_x.csv')
 
@@ -208,7 +208,23 @@ class call_model(APIView):
             response = {"Prediction":disease[0],
                         'Probab':disease[1],
                         'Consult':consultdoctor}
+
+
             print(response)
             return JsonResponse(response)
+print('Doctor',consultdoctor)
+# def consult(request):
+#     query = response[2]
+#     if len(query) > 85:
+#         speciality = []
+#     else:
+#         Sname = doctor_profile.objects.filter(name__icontains=query)
+#         Sdesc = doctor_profile.objects.filter(desc__icontains=query)
+#         speciality = Sname.union(Sdesc)
+#     if speciality.count() == 0:
+#         messages.error(request, 'No Search result found. Please refine your query')
+#
+#     params = {'speciality': speciality, 'query': query}
+#     return render(request, 'search.html', params)
 
 
