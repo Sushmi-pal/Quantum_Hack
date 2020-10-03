@@ -12,6 +12,11 @@
 </head>
 <body>
     <style>
+        body{
+            background-image: url('/static/images/service-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         .main {
             background-color: #FFFFFF;
             width: 600px;
@@ -38,7 +43,7 @@
             cursor: pointer;
             border-radius: 0.6em;
             color: #fff;
-            background: linear-gradient(to right,#2895f1,#0060b1);
+            background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
             border: 0px;
             text-decoration: none;
             outline: none;
@@ -52,6 +57,9 @@
         .btn:hover{
             font-size: 17px;
         }
+        .btn:focus {
+            background: linear-gradient(to right, #39b49a 0%, #1d86df 100%);
+        }
     </style>
   <div class="main">
     <p class="sign" align="center">Sign In</p>
@@ -62,8 +70,8 @@
         <button class= "btn btn-outline-info" type="submit">
           Login
         </button>
-      <p class="forgot"><a href="{% url 'register' %}">Not registered? </a> </p>
       <p class="forgot"><a href="{% url 'password_reset' %}">Forgot Password? </a> </p>
+      <p class="forgot"><a href="{% url 'register' %}">Not registered yet? Register Here! </a> </p>
     </form>
   </div>
 </body>

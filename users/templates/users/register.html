@@ -78,6 +78,11 @@
     </head>
     <body>
     <style>
+        body{
+            background-image: url('/static/images/service-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         .main {
             background-color: #FFFFFF;
             width: 700px;
@@ -106,7 +111,7 @@
             cursor: pointer;
             border-radius: 0.6em;
             color: #fff;
-            background: linear-gradient(to right,#2895f1,#0060b1);
+            background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
             border: 0px;
             font-family: 'Ubuntu', sans-serif;
             box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
@@ -119,6 +124,9 @@
         }
         .btn:hover{
             font-size: 17px;
+        }
+        .btn:focus {
+            background: linear-gradient(to right, #39b49a 0%, #1d86df 100%);
         }
     </style>
       <div class="main">
