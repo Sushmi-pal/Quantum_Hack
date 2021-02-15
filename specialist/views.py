@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from . models import doctor_profile
 from . models import Symptoms
@@ -9,6 +9,7 @@ from django.contrib.postgres.search import SearchQuery
 from . import views
 from django.views.generic import TemplateView
 from django.views.generic import DetailView
+# from .forms import DoctorRegisterForm
 # Create your views here.
 def doc(request):
     doctors = doctor_profile.objects.all()
@@ -75,4 +76,19 @@ def cat(request):
     return render(request,'specialist/category.html', {'doctors':doctors})
 
 
-
+# def docregister(request):
+#     if request.method == 'POST':
+#         form = DoctorRegisterForm(request.POST,request.FILES)
+#         print(request.POST)
+#         print(type(request.POST))
+#         print(form.errors)
+#         if form.is_valid():
+#             print('valid')
+#             form.save()
+#             return redirect('login')
+#         else:
+#             print(form.errors)
+#             print('Not valid')
+#     else:
+#         form = DoctorRegisterForm()
+#     return render(request, 'specialist/doctor_register.html', {'form': form})

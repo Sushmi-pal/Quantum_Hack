@@ -7,6 +7,42 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from PIL import Image
 from django.dispatch import receiver
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+    confirm_password = models.CharField(max_length=128, null=True)
+    is_doctor=models.BooleanField(default=False)
+    is_patient=models.BooleanField(default=False)
+
+class Doctor(models.Model):
+    user=models.OneToOneField(User,on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    location = models.CharField(max_length=20)
+    fee = models.IntegerField()
+    identification_image = models.ImageField(upload_to='d_pics')
+    desc = models.CharField(max_length=100)
+    nmc_num = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50)
+    qualification = models.CharField(max_length=50)
+    speciality = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.user.username
+
+    def save(self, *args, **kwargs):
+        self.user.is_doctor=True
+        super(Doctor, self).save(*args, **kwargs)
+
+class Patient(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    age=models.IntegerField()
+    Choices=(
+        ('M','Male'),
+        ('F','Female'))
+    gender=models.CharField(max_length=100,choices=Choices)
+
+    def __str__(self):
+        return self.user.username
 
 class Profile(models.Model):
     user = models.OneToOneField(

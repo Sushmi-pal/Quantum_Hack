@@ -21,6 +21,24 @@
     </head>
     <body>
 <!-----------NAVBAR section------->
+ <style>
+        .nav-item a:hover{
+            border-bottom: 2px dotted #39b49b;
+            transform: scale(0.95);
+        }
+        .nav-item a.active {
+            background: #39b49b;
+            box-shadow: 5px 5px 0 0px #fff;
+        }
+        .mastfoot {
+            background-color: #157fda;
+            padding: 10px;
+        }
+        .footer-text{
+            color: #ffffff;
+            letter-spacing: 2.7;
+        }
+ </style>
         <section id="nav-bar">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="{% url 'home' %}"><img src = "{% static 'images/logooo.png' %}" alt="image" /> </a>
@@ -187,17 +205,19 @@
                 <h1 class="title">MEMBERSHIP DETAILS</h1>
                 <div class="account text-center">
                     <h4>New Member?</h4>
-                    <button type="button" class="btn btn-primary"><a href="/register"><font color="white"> Register Here</font></a></button>
+                    <button type="button" class="btn btn-primary"><a href="/users/patr"><font color="white"> Register As Patient</font></a></button>
+                    <button type="button" class="btn btn-primary"><a href="/users/docr"><font color="white"> Register As Doctor</font></a></button>
                 </div>
                     <h4>Already A Member?</h4>
-                    <button type="button" class="btn btn-primary"><a href="/login"><font color="white"> Login Here</font></a></button>
+                <button type="button" class="btn btn-primary"><a href="/users/patientlogin/"><font color="white"> Login As Patient</font></a></button>
+                <button type="button" class="btn btn-primary"><a href="/users/doctorlogin/"><font color="white"> Login As Doctor</font></a></button>
             </div>
             {% endif %}
         </section>
  <!--------------------Contact section--------------->
         <section id="social-media" class="py-5">
             <div class="container text-center">
-                <p>FIND US ON SOCIAL MEDIA</p>
+                <p class="title">FIND US ON SOCIAL MEDIA</p>
                 <div class="social-icons">
                   <a href="https://www.facebook.com/"><img src = "{% static 'images/fb-logo(1).png' %}" /></a>
                   <a href="https://www.instagram.com/"><img src = "{% static 'images/fb-logo(2).png' %}" /></a>
@@ -207,9 +227,7 @@
         </section>
 <!----------------------Footer section--------------->
 <footer class="mastfoot mt-auto text-center">
-  <div class="inner">
-    <p>© Disease Predictor and Specialist Recommender.</p>
-  </div>
+    <p class="footer-text">© Disease Predictor and Specialist Recommender.</p>
 </footer>
     </body>
 </html>

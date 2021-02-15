@@ -77,7 +77,7 @@ def checkdisease(request):
     elif request.method == 'POST':
 
         ## access you data by playing around with the request.POST object
-
+        console.log('no', noofsym)
         inputno = int(request.POST["noofsym"])
         print(inputno)
         if (inputno == 0):

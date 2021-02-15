@@ -26,12 +26,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2548ea7f-7c9e-4c3a-90a1-f5d83c1e126d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AI/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/migrations/0002_delete_diseaseinfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/migrations/0003_diseaseinfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/migrations/0004_delete_diseaseinfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/migrations/0005_diseaseinfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/templates/disease/checkdisease.html" beforeDir="false" afterPath="$PROJECT_DIR$/disease/templates/disease/checkdisease.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/disease/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile_pics/Snapchat-1771970044.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile_pics/Snapchat-2031659628.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profile_pics/WhatsApp_Image_2020-08-19_at_12.45.22_PM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profile_pics/WhatsApp_Image_2020-08-19_at_12.45.22_PM_qB5ZpPc.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialist/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialist/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialist/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testimonials/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0002_auto_20200424_1916.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0003_userreview.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0004_auto_20200512_0832.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0005_auto_20200512_0857.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0006_auto_20200512_1010.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0007_delete_userreview.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0008_userreview.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,19 +95,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Neha\PycharmProjects\final\static\css" />
-      <recent name="C:\final\specialist\templates\specialist" />
-      <recent name="C:\final\images" />
-      <recent name="C:\final\media" />
-      <recent name="C:\final\media\profile_pics" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\final" />
       <recent name="C:\final\images\profile_pics" />
       <recent name="C:\final\media\profile_pics" />
       <recent name="C:\final\media" />
       <recent name="C:\Users\sushm\Desktop\Disease-Predictor-master\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\final\media" />
+      <recent name="C:\final\media\profile_pics" />
+      <recent name="C:\Users\Neha\PycharmProjects\final\static\css" />
+      <recent name="C:\final\specialist\templates\specialist" />
+      <recent name="C:\final\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -135,6 +165,60 @@
       <workItem from="1600997468490" duration="3904000" />
       <workItem from="1601014641584" duration="1407000" />
       <workItem from="1601022869078" duration="2937000" />
+      <workItem from="1601028250633" duration="409000" />
+      <workItem from="1601173740181" duration="3043000" />
+      <workItem from="1601650058649" duration="1682000" />
+      <workItem from="1601671402260" duration="1877000" />
+      <workItem from="1601794101141" duration="1293000" />
+      <workItem from="1601803280665" duration="2334000" />
+      <workItem from="1601886442602" duration="869000" />
+      <workItem from="1602042201619" duration="1818000" />
+      <workItem from="1602065774258" duration="2007000" />
+      <workItem from="1602084555144" duration="1278000" />
+      <workItem from="1602650499842" duration="1426000" />
+      <workItem from="1602727444568" duration="1244000" />
+      <workItem from="1602806611926" duration="663000" />
+      <workItem from="1602820894011" duration="1231000" />
+      <workItem from="1602840326192" duration="597000" />
+      <workItem from="1602851825423" duration="1034000" />
+      <workItem from="1602895055882" duration="600000" />
+      <workItem from="1602919416675" duration="1236000" />
+      <workItem from="1602924673207" duration="600000" />
+      <workItem from="1602935066971" duration="1380000" />
+      <workItem from="1602981332408" duration="1845000" />
+      <workItem from="1603088597350" duration="6000" />
+      <workItem from="1603158191338" duration="1267000" />
+      <workItem from="1604369421216" duration="259000" />
+      <workItem from="1604578525409" duration="617000" />
+      <workItem from="1604618414713" duration="1316000" />
+      <workItem from="1604657343065" duration="807000" />
+      <workItem from="1604710211562" duration="1345000" />
+      <workItem from="1604811511493" duration="643000" />
+      <workItem from="1604882759527" duration="2460000" />
+      <workItem from="1605161641717" duration="210000" />
+      <workItem from="1605253172362" duration="1920000" />
+      <workItem from="1605845020000" duration="1193000" />
+      <workItem from="1605929696544" duration="1203000" />
+      <workItem from="1606477873107" duration="2159000" />
+      <workItem from="1612504847386" duration="888000" />
+      <workItem from="1612508261148" duration="1152000" />
+      <workItem from="1613021510981" duration="2787000" />
+      <workItem from="1613034469656" duration="721000" />
+      <workItem from="1613046348714" duration="2362000" />
+      <workItem from="1613051427666" duration="553000" />
+      <workItem from="1613094353007" duration="13081000" />
+      <workItem from="1613116428856" duration="2131000" />
+      <workItem from="1613131500556" duration="3423000" />
+      <workItem from="1613186095876" duration="3007000" />
+      <workItem from="1613200886254" duration="740000" />
+      <workItem from="1613204111385" duration="8831000" />
+      <workItem from="1613225604619" duration="5450000" />
+      <workItem from="1613231851476" duration="1133000" />
+      <workItem from="1613273219125" duration="5768000" />
+      <workItem from="1613288997361" duration="5071000" />
+      <workItem from="1613298793127" duration="2722000" />
+      <workItem from="1613309183184" duration="3133000" />
+      <workItem from="1613355580862" duration="7825000" />
     </task>
     <servers />
   </component>
@@ -154,37 +238,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="460" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600997931109">
+    <state x="442" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612505501953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="460" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1600997931109" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598542587375">
+    <state x="442" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1612505501953" />
+    <state x="896" y="111" key="FileChooserDialogImpl" timestamp="1613206034540">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598542587375" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1600765791470">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600765791470" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1598608254001">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1598608254001" />
-    <state x="129" y="55" key="MergeDialog" timestamp="1598676892079">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1598676892079" />
-    <state x="321" y="125" key="MultipleFileMergeDialog" timestamp="1601023128045">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="321" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1601023128045" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1598487286218">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598487286218" />
-    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601023120847">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="500" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1601023120847" />
+    <state x="896" y="111" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613206034540" />
   </component>
 </project>

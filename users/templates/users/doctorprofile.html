@@ -117,25 +117,26 @@
                         <div class="row">
                           <div class="col-12">
                             <div class="media mb-4">
-                                <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+                                <img class="rounded-circle account-img" src= "{% static 'images/d_pics/20161004_150054.jpg' %}" height="156px" width="156px">
                                 <div class="media-body mb-4">
                                     <h2 class="account-heading">{{ user.username }}</h2>
                                     <p class="text-secondary">{{user.email}}</p>
                                 </div>
                             </div>
-                            <form method ="POST" enctype="multipart/form-data">
-                                {% csrf_token%}
-                                <fieldset class="form-group">
 
-                                    {{ u_form | crispy }}
-                                    {{ z_form | crispy }}
-                                    {{ p_form | crispy }}
 
-                                </fieldset>
-                                <div class="form-group">
-                                    <button class="updatebutton" type="submit">Update</button>
-                                </div>
-                            </form>
+
+                                    <p>{{user.doctor.nmc_num}}</p>
+                                    <p>{{user.doctor.speciality}}</p>
+                                    <p>{{user.doctor.location}}</p>
+                                    <p>{{user.doctor.fee}}</p>
+                                    <p>{{user.doctor.desc}}</p>
+                                    <p>{{user.doctor.phone}}</p>
+                                    <p>{{user.doctor.qualification}}</p>
+
+
+
+
                           </div>
                         </div>
            </div>

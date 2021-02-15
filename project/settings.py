@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'predict',
+        'NAME': 'mp',
         'USER':'postgres',
         'PASSWORD':'major',
         'PORT':'5432',
@@ -146,4 +146,5 @@ EMAIL_USE_TLS=True
 DEFAULT_FROM_EMAIL='Major Project Team <securesally@gmail.com>'
 
 MODELS = os.path.join(BASE_DIR,'AI/models')
+AUTH_USER_MODEL='users.User'
 # smuyotdsrsgrtkxj

@@ -8,7 +8,7 @@ from users import views
 from users import views as users_views
 # from django.contrib.auth import views as auth_views
 # from django.contrib.auth.views import  login,
-from users.views import register,LoginView,LogoutView,ProfileView
+from users.views import register,PatientLoginView, DoctorLoginView,LogoutView,ProfileView,DProfileView
 from services.views import (
 ServicePageView
 )
@@ -27,9 +27,11 @@ urlpatterns = [
     path('search/',include('disease.urls')),
     path('',include('pages.urls')),
     path('predict/',include('AI.urls')),
-    # path('users/',include('users.urls')),
+    path('users/',include('users.urls')),
     path('profile/',ProfileView,name='profile'),
-    path('login/',LoginView,name='login'),
+    path('dprofile/',DProfileView,name='dprofile'),
+    path('patientlogin/',PatientLoginView,name='login'),
+    path('doctorlogin/',DoctorLoginView,name='login'),
     path('logout/',LogoutView,name='logout'),
     path('register/',register,name='register'),
     path('index/', views.home, name='home'),

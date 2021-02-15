@@ -9,7 +9,8 @@ urlpatterns = [
     path('search',search,name='search'),
     path('select',select,name='select'),
     path('detail/<int:pk>/',DoctorDetailView.as_view(),name='detail'),
-    path('category/',cat)
+    path('category/',cat),
+    # path('doctor_register',docregister)
 
 
 
