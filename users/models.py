@@ -19,9 +19,10 @@ class Doctor(models.Model):
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=20)
     fee = models.IntegerField()
-    identification_image = models.ImageField(upload_to='d_pics')
+    identification_image = models.ImageField(upload_to='static/images/d_pics')
     desc = models.CharField(max_length=100)
-    nmc_num = models.CharField(max_length=50)
+    experience_yrs=models.CharField(max_length=100, null=True)
+    nmc_num = models.CharField(max_length=50, unique=True)
     phone = models.CharField(max_length=50)
     qualification = models.CharField(max_length=50)
     speciality = models.CharField(max_length=50)
@@ -69,8 +70,7 @@ class Profile(models.Model):
             img.save(self.image.path)
 
 
-class UserReview(models.Model):
-    review=models.TextField()
+class Feedback(models.Model):
+    doctor = models.OneToOneField(Doctor, on_delete=models.CASCADE)
+    feedback = models.TextField()
 
-    def __str__(self):
-        return self.review

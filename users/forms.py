@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
-from .models import Profile,Patient,Doctor
+from .models import Profile,Patient,Doctor,Feedback
 User=get_user_model()
 
 
@@ -20,7 +20,7 @@ class UserUpdateForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['username','email']
+        fields = ['username']
 
 
 
@@ -50,6 +50,7 @@ class DoctorSignupForm(UserCreationForm):
     phone = forms.CharField(max_length=50)
     qualification = forms.CharField(max_length=50)
     speciality = forms.CharField(max_length=50)
+    email=forms.EmailField()
     class Meta(UserCreationForm.Meta):
         model = User
 
@@ -64,8 +65,10 @@ class PatientSignUpForm(UserCreationForm):
     Choices=(
         ('M','Male'),
         ('F','Female'))
+    email = forms.EmailField()
     age=forms.IntegerField()
     gender = forms.ChoiceField(choices=Choices)
+
     class Meta(UserCreationForm.Meta):
         model = User
 
@@ -75,3 +78,8 @@ class PatientSignUpForm(UserCreationForm):
         if commit:
             user.save()
         return user
+
+class FeedbackForm(forms.ModelForm):
+    class Meta:
+        model=Feedback
+        fields=['feedback']

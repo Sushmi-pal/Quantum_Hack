@@ -1,0 +1,28 @@
+id,name,location,fee,identification_image,desc,nmc_num,phone,qualification,speciality,user_id,experience_yrs
+23,Dr. Dipendra Gautam,Kanti Path,500,static/images/d_pics/Dr._Dipendra_Gautam.jpg,Otorhinolaryngology & head and neck surgery,4826,01-4221988,"MBBS,MS",Senior consultant ENT Surgeon,28,
+5,Dr. Aditya Mahaseth,"Janswastha Marga, Ja",500,static/images/d_pics/Dr._Aditya_Mahaseth.jpg,Cardiologist and Physician.,11285,041-590713,Doctorate of Medicine (DM) in Cardiology (BPKIHS),"Cardiology, Internal Medicine",5,5
+4,Dr. Pradeep Rajbhandari,Dhulikhel Hospital,300,static/images/d_pics/Dr._Pradeep_Rajbhandari.jpg,Consultant ENT & Head and Neck surgeon,12385,01-490639,"MBBS(KU),MS(KUSMS,Nepal)",ENT & Head and Neck Surgery,4,6
+3,Dr. Bikash Nepal,"Mitrapark, Chabahil",400,static/images/d_pics/Dr.Bikash.jpg,"General and Laparoscopic Surgeon, working as a Chief Consulant Surgeon in Bir Hospital.",6866,01-4469979/9844485557,"MBBS, MS(AIIMS)",Laparosopic Surgeon,3,3
+2,Dr. Richa Amatya,"Bhaisepati, Lalitpur",500,static/images/d_pics/Dr.Richa.jpg,"Compassionate, solutions-oriented and dedicated to providing exceptional care",11427,01-4217766,"MBBS(Bangladesh), MD Psychiatry (Manipal, Pokhara)",Psychiatry,2,9
+10,Dr. Rupak Ghimire,"Sinamangal,Kathmandu",500,static/images/d_pics/Dr.Rupak.jpg,"MBBS, MD",7902,"01-4469064, 01-4476152","MBBS, MD",Dermatologist & Hair Transplant Surgeon,11,9
+9,Dr. Shristi Bajracharya,"Maharajgunj, Kathman",400,static/images/d_pics/Dr.Shristi.jpg,"MBBS (Nepal) , MD (Phil)",6116,"01-4411134, 01-4416838, 01-4415461, 01-4412092","MBBS (Nepal) , MD (Phil)",Consultant Pediatrician,10,4
+8,Dr. Satish Prasad Barnawal,"Basundhara, Kathmand",500,static/images/d_pics/Dr._Satish_Prasad_Barnawal.jpg,Dr. Satish is professionally competent orthopaedic surgeon.,13339,"01-4354537,01-4381962",MS Orthopaedic Surgery,Orthopedic,9,3
+1,Dr. Ghanshyam Kharel,"Kanti Path, Kathmand",500,static/images/d_pics/Dr.Ghanshyam.jpg,"MBBS, MD, DM, Neurology (IOM, Teaching Hospital, Nepal)",7159,"01-4221988, 01-4221119","MBBS, MD, DM, Neurology (IOM, Teaching Hospital, N",Neurologist,1,12
+7,"Dr. Anil Kumar Bhatta, PhD","New Baneshwor-10, Ka",400,static/images/d_pics/Dr._Anil_Kumar.jpg,"Self-motivated, creative and detail-oriented with excellent problem-solving skills.",9480,"4780110, 4780120","MBBS, DIDDS, MD, PhD","Dermatologist, Venereologist and Aesthetician",7,4
+6,Dr. Anil Baral,"Kanti Path, Kathmand",400,static/images/d_pics/Dr.Anil_Baral.jpg,"MBBS, MD (Internal Medicine), MBBS, MD (Internal Medicine)",3870,"Kanti Path, Kathmandu Nepal","MBBS, MD (Internal Medicine), MBBS, MD (Internal M",Consultant Physician & Nephrologist,6,4
+19,Sabin Palikhe,Koteshwor,500,static/images/d_pics/Dr.Rupak_m1gRMOB.jpg,MBBS,1291,01-4512390,MBBS,ENT,23,1
+18,Sanima Palikhe,Tokha,400,static/images/d_pics/Dr.Richa_TAKRSc8.jpg,MBBS intern,1192,9817198781,"MBBS, Nepal",Surgeon,22,1
+17,Dr. Barsha Ghimire,"Basundhara, Dhapashi",400,static/images/d_pics/Dr._Barsha_Ghimire.jpg,"completed her BDS from University Dental College, Dhaka",10605,01-4385910,"BDS, MSc Prosthodontics",Dentist,21,5
+22,Dr. Mukesh Prasad Sah,Imadol,500,static/images/d_pics/Dr._Mukesh_Prasad_Sah.jpg,"MD Gastroenterology, Bangladesh; MBBS, Nepal",9792,01-5201682,"MD Gastroenterology, Bangladesh; MBBS, Nepal",Consultant Gastroenterologist and Hepatologist,26,2
+21,Dr. Shakti Basnet,Gaushala,400,static/images/d_pics/Dr._Shakti_Basnet.jpg,Currently Consultant Nephrologist at Lumibini zonal Hospital,6339,01-4485192,MD,Physician & Nephrology,25,3
+20,Dr. Dilip Prajapati,Dhulikhel Hospital,500,static/images/d_pics/Dr._Dilip_Prajapati.jpg,"BDS, MDS Preventive and Community Dentistry",11471,01-490639,"BDS, MDS Preventive and Community Dentistry",Dental Consultant,24,1
+16,Dr. Pratima Poudel,Maharajganj,300,static/images/d_pics/Dr._Pratima_Poudel.jpg,"MBBS, MD",12271,01-4455674,"MBBS, MD",Dermatologist,20,4
+15,Dr. Bishow Prakash Thakur,Kalimati,100,static/images/d_pics/Dr._Bishow_Prakash_Thakur.jpg,"BDS (UCMS-TU), MDS Orthodontics (PDCH-TU)",13379,01-4225555,"BDS (UCMS-TU), MDS Orthodontics (PDCH-TU)",Consultant Orthodontist and General Dental Practit,19,9
+14,Dr. Hari Har Khanal,Tripureshwor,500,static/images/d_pics/Dr._Hari_Har_Khanal.jpg,Bir Hospital cardiology department as a senior consultant cardiologist,1656,01-4262027,"MD, Russian Federation",Cardiologist,18,10
+13,Dr. Shekhar Rajbhandari,"Maitighar, Kathmandu",500,static/images/d_pics/Dr._Shekhar.jpg,Consultant Cardiologist,3052,01-4256656,MD,Consultant Cardiologist,17,6
+12,ramesh,kalimati,500,static/images/d_pics/Dr._Anil_Kumar_JvddZcb.jpg,"MD, MS Consultant Urologist",255555,9808799274,"MBBS, Nepal",Nephorlogist,16,5
+11,Dr. Ambuj Karn,"Kanti Path, Kathmand",600,static/images/d_pics/Dr._Ambuj_Karn.jpg,MD (Radiation Oncology),3068,"01-4221988, 01-4221119",MD (Radiation Oncology),Radiation Oncologist,12,3
+24,Dr. Jayendra Pradhananga,Kanti Path,400,static/images/d_pics/Dr._Jayendra_Pradhananga.jpg,experienced and reputed Clinician,6565,01-4221988,"MD, Russian Federation",CLINICIAN (ENT),29,
+23,Dr. Dipendra Gautam,Kanti Path,500,static/images/d_pics/Dr._Dipendra_Gautam.jpg,Otorhinolaryngology & head and neck surgery,4826,01-4221988,"MBBS,MS",Senior consultant ENT Surgeon,28,9
+24,Dr. Jayendra Pradhananga,Kanti Path,400,static/images/d_pics/Dr._Jayendra_Pradhananga.jpg,experienced and reputed Clinician,6565,01-4221988,"MD, Russian Federation",CLINICIAN (ENT),29,9
+24,Dr. Jayendra Pradhananga,Kanti Path,400,static/images/d_pics/Dr._Jayendra_Pradhananga.jpg,experienced and reputed Clinician,6565,01-4221988,"MD, Russian Federation",CLINICIAN (ENT),29,8

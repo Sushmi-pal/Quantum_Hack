@@ -2,11 +2,11 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm, \
-    PatientSignUpForm, DoctorUpdateForm
+    PatientSignUpForm, DoctorUpdateForm, FeedbackForm
 from django.conf import settings
 from django.core.mail import send_mail
 from django.db import transaction
-from .models import UserReview
+
 from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm, DoctorSignupForm
 from django.contrib.auth.decorators import login_required
@@ -16,9 +16,12 @@ from . import models
 from .models import Profile, Patient, Doctor
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import get_user_model
+from contact.models import Contact
 User=get_user_model()
 def home(request):
-    return render(request, 'index.html')
+    c = Contact.objects.all()
+    return render(request, 'index.html', {'c': c})
+
 
 def register(request):
     if request.method == 'POST':
@@ -76,9 +79,10 @@ def DoctorLoginView(request):
                 print('user', user)
 
                 login(request, user)
-                return redirect('/profile/')
+                return redirect('/dprofile/')
             else:
                 print('Not authenticated')
+                return HttpResponse("Error")
 
     elif request.method == 'GET':
         form = LoginForm()
@@ -86,7 +90,7 @@ def DoctorLoginView(request):
 
 def LogoutView(request):
     logout(request)
-    return redirect('/login/')
+    return redirect('index')
 
 
 @login_required
@@ -94,61 +98,37 @@ def LogoutView(request):
 def ProfileView(request):
     if request.method == 'POST':
         print(request.user.id)
-        u_form = UserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
-
-        if u_form.is_valid() and p_form.is_valid():
-
-            u_form.save()
-
+        if p_form.is_valid():
             p_form.save()
-
-
-
-
-
-
             messages.success(
                 request,
                 f'Your profile has been updated successfully'
             )
             return redirect('profile')
-
-
     else:
-        u_form = UserUpdateForm(instance=request.user)
         p_form = ProfileUpdateForm(instance=request.user.profile)
 
 
     context = {
-        'u_form': u_form,
+
         'p_form': p_form,
 
     }
     return render(request, 'users/profile.html', context)
 
+
+
+
+
+
+
+
+
+
 @login_required
 @transaction.atomic
 def DProfileView(request):
-    # if request.method == 'POST':
-    #     print(request.user)
-    #     u_form = UserUpdateForm(request.POST, instance=request.user)
-    #     p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
-    #     z_form = DoctorUpdateForm(request.POST, instance=request.user)
-    #     if u_form.is_valid() and p_form.is_valid() and z_form.is_valid():
-    #         u_form.save()
-    #
-    #         p_form.save()
-    #         z_form.save()
-    #
-    #         messages.success(
-    #             request,
-    #             f'Your profile has been updated successfully'
-    #         )
-    #         return redirect('dprofile')
-    #
-    #
-    # else:
     u_form = UserUpdateForm(instance=request.user)
     p_form = ProfileUpdateForm(instance=request.user.profile)
     z_form = DoctorUpdateForm(instance=request.user)
@@ -207,6 +187,7 @@ def docregister(request):
         print(request.POST)
         print(request.FILES)
         username = request.POST.get('username')
+        email = request.POST.get('email')
         image=request.FILES.get('identification_image')
         print('image',image)
         print('username', username)
@@ -228,7 +209,7 @@ def docregister(request):
         is_patient = False
         is_doctor = True
         u = User.objects.create(username=username, password=p1, confirm_password=p2,
-                                is_patient=is_patient, is_doctor=is_doctor)
+                                is_patient=is_patient, is_doctor=is_doctor, email=email)
 
 
         if is_doctor:
@@ -256,6 +237,7 @@ def patientregister(request):
         form = PatientSignUpForm(request.POST)
         print(request.POST)
         username=request.POST.get('username')
+        email=request.POST.get('email')
         print('username',username)
         password1=request.POST.get('password1')
         print(password1)
@@ -272,24 +254,34 @@ def patientregister(request):
         gender=request.POST.get('gender')
         is_patient=True
         is_doctor=False
-        u = User.objects.create(username=username, password=p1, confirm_password=p2,is_patient=is_patient,is_doctor=is_doctor)
+        u = User.objects.create(username=username, password=p1, confirm_password=p2,is_patient=is_patient,is_doctor=is_doctor,email=email)
         print(is_doctor)
         print(is_patient)
 
         if is_patient:
             p=Patient.objects.create(user=u,age=age,gender=gender)
             p.save()
-            return redirect('login')
+            return redirect('patientlogin')
 
         print(form.errors)
         if form.is_valid():
             print('valid')
 
             form.save()
-            return redirect('login')
+            return redirect('patientlogin')
         else:
             print(form.errors)
             print('Not valid')
     else:
         form = PatientSignUpForm()
     return render(request, 'users/patientregister.html', {'form': form})
+
+def feedback(request):
+    if request.method=='POST':
+        fk=request.POST['feedback']
+        print(fk)
+
+        contact = Feedback(feedback=feedback)
+        contact.save()
+
+    return render(request,'doctor_profile_detail.html')

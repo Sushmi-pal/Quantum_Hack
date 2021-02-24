@@ -6,6 +6,7 @@ from .views import ContactView
 urlpatterns = [
 
     path('',ContactView.as_view(), name='contact'),
-    path('feedback/',feedback,name='feedback')
+    path('feedback/',feedback,name='feedback'),
+
 
 ]

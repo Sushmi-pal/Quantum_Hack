@@ -20,3 +20,7 @@ def feedback(request):
             contact.save()
 
     return render(request,'feedback.html')
+
+# def indexfeedback(request):
+#     c=Contact.objects.all()
+#     return render (request, 'index.html',{'c':c})

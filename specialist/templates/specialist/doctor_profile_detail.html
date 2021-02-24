@@ -121,5 +121,12 @@ a:hover, a:focus, a:active {
          </div>
         </div>
        </div>
+<form method="POST">
+      {% csrf_token %}
 
+        <input type="text">
+        <button class= "btn btn-outline-info" type="submit">
+          Submit
+        </button>
+</form>
 {% endblock %}

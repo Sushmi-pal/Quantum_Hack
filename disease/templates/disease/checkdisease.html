@@ -281,7 +281,16 @@ $("#predict").click(function () {
     console.log(data);
  
     document.querySelector("#diseasefield").innerText = data["Prediction"];
-        document.getElementById('resultConfidence').innerText = `${parseFloat(data["Probab"]).toFixed(2) * 100}`+"%";
+      // document.getElementById('resultConfidence').innerText = `${parseFloat(data["Probab"]).toFixed(2) * 100}`+"%";
+
+      arra=new Array()
+      for (let i of data['Probab']){
+          let a=`${parseFloat((i) * 100).toFixed(2)}`+"%";
+          arra.push(a)
+          console.log('arra',arra)
+      }
+  console.log('arra1',arra)
+  document.getElementById('resultConfidence').innerText = arra;
         document.getElementById('resultSpecialist').innerText = data["Consult"];
 
 
@@ -349,38 +358,38 @@ $("#predict").click(function () {
         </div>
   </div>
         
-      
-    
- 
- 
-<!-- 
- 
+
+
+
+
+<!--
+
 <div class="dropdown">
-  
+
     <button onclick="Functionshow()" class="dropbtn">Add symptoms</button>
-      
+
   </div >
     <div id="myDropdown" class="dropdown-content">
- 
-     <div id="searchbardiv" class="searchbardiv">    
-      
+
+     <div id="searchbardiv" class="searchbardiv">
+
     <input id="searchbar" class="searchbar" onkeyup="search_symptoms()" type="text"
     name="search" placeholder=" Search symptoms.. "> <br>
-  </div> 
+  </div>
   <div>
             {% for i in list2 %}
-            
+
             <a class="links" onclick="Functionsymptoms(this.textContent)">{{i}}</a>
-            
+
             {% endfor %}
   </div>
         </div>
        -->
-    
+
 <br><br>
   <div class="text-center">
         <div class="card" id= "symptoms-box">
-    
+
       {% csrf_token %}
             <div class="card-header">Symptoms list -</div>
                     <div class="card-body" id="sympbox" >
@@ -392,9 +401,9 @@ $("#predict").click(function () {
              </div>
         </div>
   </div>
- 
+
   <br>
- 
+
   <div id="resultdiv" style="display: none;" >
         <div class="text-center">
               <div class="card" id="predicted-data">
@@ -405,10 +414,13 @@ $("#predict").click(function () {
                     <span class="diseasefield" >Predicted disease is : {{response.Prediction}}</span>
                     <span class="diseasefield" id="diseasefield" style="color: #092700; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span> <br>
                     <br>
-                    <span class="diseasefield">Confidence score of :  </span>
-                    <span id = "resultConfidence" style="color: #092700 !important; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span>
-                    <br> <br>
-                    <span class="specialistfield" id="specialistfield">Consult :  </span>
+                  <span class="diseasefield">confidence score of :  </span>
+                    <span id = "resultConfidence">
+
+                    </span>
+                  <br>
+                  <br>
+                  <span class="specialistfield" id="specialistfield">Consult :  </span>
                     <span id = "resultSpecialist" style="color: #092700; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span>
               </div>
         </div>
@@ -425,22 +437,20 @@ $("#predict").click(function () {
         <br><br>
         </form>
         </div>
+</div>
+</div>
 
 
+
+
+
+
+
 </div>
  
-         
- 
+  <div class="text-center " >
+    <p>This tool doesn't provide medical advice. It is intended for <strong>Informational Purposes</strong> only. <br>
+    It is not a substitute for professional medical advice, diagnosis or treatment.</p>
 </div>
- 
- 
- 
- 
- 
- 
- 
-</div>
- 
- 
  
 {% endblock %}

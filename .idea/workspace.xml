@@ -27,40 +27,33 @@
   <component name="ChangeListManager">
     <list default="true" id="2548ea7f-7c9e-4c3a-90a1-f5d83c1e126d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disease/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disease/migrations/0002_delete_diseaseinfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disease/migrations/0003_diseaseinfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disease/migrations/0004_delete_diseaseinfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disease/migrations/0005_diseaseinfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/disease/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/disease/templates/disease/checkdisease.html" beforeDir="false" afterPath="$PROJECT_DIR$/disease/templates/disease/checkdisease.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/disease/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/disease/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/profile_pics/Snapchat-1771970044.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/profile_pics/Snapchat-2031659628.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/WhatsApp_Image_2020-08-19_at_12.45.22_PM.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/WhatsApp_Image_2020-08-19_at_12.45.22_PM_qB5ZpPc.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/specialist/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialist/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/specialist/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialist/templates/specialist/doctor_profile_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/templates/specialist/doctor_profile_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specialist/templates/specialist/doctor_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/templates/specialist/doctor_register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/specialist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/specialist/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/specialist/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimonials/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/doctor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0002_auto_20200424_1916.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0003_userreview.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0004_auto_20200512_0832.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0005_auto_20200512_0857.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0006_auto_20200512_1010.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0007_delete_userreview.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0008_userreview.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/doctorlogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/doctorlogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/doctorprofile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/doctorprofile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/patientlogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/patientlogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/patientregister.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/patientregister.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,19 +88,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\final" />
-      <recent name="C:\final\images\profile_pics" />
-      <recent name="C:\final\media\profile_pics" />
-      <recent name="C:\final\media" />
-      <recent name="C:\Users\sushm\Desktop\Disease-Predictor-master\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\final\static\images" />
       <recent name="C:\final\media" />
       <recent name="C:\final\media\profile_pics" />
       <recent name="C:\Users\Neha\PycharmProjects\final\static\css" />
       <recent name="C:\final\specialist\templates\specialist" />
-      <recent name="C:\final\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\final\AI\models" />
+      <recent name="C:\final\static\images" />
+      <recent name="C:\final" />
+      <recent name="C:\final\images\profile_pics" />
+      <recent name="C:\final\media\profile_pics" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -219,6 +212,25 @@
       <workItem from="1613298793127" duration="2722000" />
       <workItem from="1613309183184" duration="3133000" />
       <workItem from="1613355580862" duration="7825000" />
+      <workItem from="1613372425053" duration="14545000" />
+      <workItem from="1613392990770" duration="6504000" />
+      <workItem from="1613443254975" duration="3069000" />
+      <workItem from="1613454999375" duration="28108000" />
+      <workItem from="1613529361949" duration="12392000" />
+      <workItem from="1613560721973" duration="1354000" />
+      <workItem from="1613570111023" duration="1495000" />
+      <workItem from="1613577197026" duration="1213000" />
+      <workItem from="1613612845289" duration="648000" />
+      <workItem from="1613631054652" duration="675000" />
+      <workItem from="1613635684165" duration="1291000" />
+      <workItem from="1613660665409" duration="625000" />
+      <workItem from="1613904350245" duration="5468000" />
+      <workItem from="1613915809637" duration="3649000" />
+      <workItem from="1613969152145" duration="2361000" />
+      <workItem from="1614088538890" duration="1941000" />
+      <workItem from="1614148941343" duration="10000" />
+      <workItem from="1614162550722" duration="4554000" />
+      <workItem from="1614169346515" duration="5014000" />
     </task>
     <servers />
   </component>
@@ -242,9 +254,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="442" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1612505501953" />
-    <state x="896" y="111" key="FileChooserDialogImpl" timestamp="1613206034540">
+    <state x="896" y="111" key="FileChooserDialogImpl" timestamp="1613543434541">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="896" y="111" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613206034540" />
+    <state x="896" y="111" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613543434541" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1613638237558">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1613638237558" />
   </component>
 </project>

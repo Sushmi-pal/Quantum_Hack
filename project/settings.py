@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mp',
+        'NAME': 'dpsr',
         'USER':'postgres',
         'PASSWORD':'major',
         'PORT':'5432',
@@ -137,13 +137,18 @@ MEDIA_ROOT= os.path.join(BASE_DIR,'images')
 # STATICFILES_DIRS=( os.path.join(BASE_DIR,'static'),)
 
 STATICFILES_DIRS=( os.path.join(BASE_DIR,'static'),)
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='sushmipalikhe97@gmail.com'
-EMAIL_HOST_PASSWORD='bqgiijwzmpqyrvqy'
-EMAIL_PORT=587
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_HOST='smtp.gmail.com'
+# EMAIL_HOST_USER='sushmipalikhe97@gmail.com'
+# EMAIL_HOST_PASSWORD='bqgiijwzmpqyrvqy'
+# EMAIL_PORT=587
+# EMAIL_USE_TLS=True
+# DEFAULT_FROM_EMAIL='Major Project Team <securesally@gmail.com>'
 EMAIL_USE_TLS=True
-DEFAULT_FROM_EMAIL='Major Project Team <securesally@gmail.com>'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER = 'sushpalikhe85@gmail.com'
+EMAIL_HOST_PASSWORD = 'asdf65176'
+EMAIL_PORT = '587'
 
 MODELS = os.path.join(BASE_DIR,'AI/models')
 AUTH_USER_MODEL='users.User'
